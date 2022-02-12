@@ -1,0 +1,40 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+/*** FACILITIES  ***/
+#facilities{
+    background-color: #E9ECEF;
+    padding: 30px 0px;
+}
+
+#master{
+    background-color: #dbe5e6;
+    padding: 30px 0px;
+    padding-bottom: 40px;
+}
+
+
+.botones{
+    margin-bottom: 20px;
+}
+
+.yes{
+    margin-bottom: 15px;
+}
+
+#row{
+    padding: 0px 30px;
+}
+
+
+/*** NAVBAR ***/
+
+
+
+
+
+
+

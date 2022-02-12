@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Map --> almacenar elementos clave = valor
+        // Son iterables 
+
+        var mapa = new Map();
+        mapa.set("Pepe", 5.0);
+        mapa.set("Juan", 7.2);
+        mapa.set("Maria", 8.2);
+        mapa.set("Laura", 6.8);
+        mapa.set("Ismael", 9.3);
+        mapa.set("Sofia", 4.7);
+
+        // Los mapas no permiten claves duplicadas y si lo hago se sobreescribe el valor
+        mapa.set("Ismael", 2.6);
+
+        // Recorrer un elemento
+        console.log("Nota de Laura " + mapa.get("Laura"));
+
+        // Eliminar un elemento
+        mapa.delete("Juan");
+
+        // Mostrar numero de elementos
+        console.log("Numero de elementos: " + mapa.size);
+
+        // Recorre un mapa
+        mapa.forEach(valor => {
+            console.log(valor);
+        });
+
+        for (var[clave, valor] of mapa) {
+            console.log(clave + " = " + valor);
+        }
+
+        // Solo quiero mostrar las claves
+        for(var clave of mapa.keys()){
+            console.log(clave);
+        }
+
+        // Solo quiero mostrar los valores
+        for(var valor of mapa.values()){
+            console.log(valor);
+        }
+
+        // Mostrar los elementos por pares (key=value)
+        for(var[clave, valor] of mapa.entries()){
+            console.log(clave + " = " + valor);
+        }
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* flex-items */
+
+.flex-container {
+    display: flex;
+
+}
+
+.flex-item {
+    background: #248;
+    color: #fff;
+    margin: 5px;
+    height: 100px;
+    min-width: 150px;
+    text-align: center;
+    flex-grow: 1;
+    width: 300px;
+
+}
+
+.orange{
+    background: orange;
+    flex-basis: 400px;
+    flex-shrink: 0;
+    order: 10;
+}
+
+.green {
+    background: green;
+
+
+}

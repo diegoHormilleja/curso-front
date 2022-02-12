@@ -1,0 +1,8 @@
+/* */
+a{text-decoration: none; color: darkorchid;}
+
+/* elemento:evento */
+a:hover{text-decoration: underline; font-size: 1.2em;}
+a:visited{text-decoration: none; color: darkorchid;}
+
+p:hover{background-color: darkorchid;}

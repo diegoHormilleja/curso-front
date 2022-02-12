@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var nombres = ["Pepe", "Juan", "Antonio", "Laura", "Sofia", "Ismael"];
+
+        for (var i = 0; i < nombres.length; i++) {
+            console.log(nombres[i]);
+        }
+
+        // Aplicando programacion funcional
+        nombres.forEach(nombre => {
+            console.log(nombre);
+        });
+
+        var mayusculas = nombres.map(nombre => nombre.toUpperCase());
+        console.log(nombres);
+        console.log(mayusculas);
+
+        var numeros = [1, 5, 2, 4];
+
+        // El array no cambia, solo se aplican las modificaciones en una copia
+        // se le llama principio de inmutabilidad.
+        numeros.map(num => num * 2);
+        console.log(numeros);
+
+        // Asi si que se modifica
+        numeros = numeros.map(num => num * 2);
+        console.log(numeros);
+
+        // Filtrar elementos de una coleccion
+        numeros.filter(num => num > 3);
+        console.log(numeros);
+
+
+        var mayores = numeros.filter(num => num > 3);
+        console.log(mayores);
+
+        var resultado = [5, 9, 2, 6].reduce((total, num) => total + num);
+        console.log(resultado);
+
+        // Sumar los numeros mayores de 5
+        var resultado2 = [5, 9, 2, 6]
+            .filter(num => num > 5)
+            .reduce((total, num) => total + num);
+        console.log(resultado2);
+
+        var resultado3 = ["5", "9", "2", "6"]
+            .map(dato => parseInt(dato))
+            .filter(num => num > 5)
+            .reduce((total, num) => total + num);
+        console.log(resultado3);
+
+    </script>
+
+</body>
+
+</html>

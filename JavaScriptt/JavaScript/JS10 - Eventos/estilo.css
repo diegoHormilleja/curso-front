@@ -1,0 +1,12 @@
+.contenedor {
+    background: blue;
+    padding: 10px;
+}
+
+.seleccionado {
+    color: red;
+}
+
+div {
+    margin: 10px;
+}

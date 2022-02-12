@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/Empleado.js"></script>
+</head>
+<body>
+    <script>
+        var empleado1 = new Empleado("Juan", "Lopez", 38000);
+        console.log(empleado1.mostrarInfo());
+        // console.log(empleado1.getContador()); --> asi los llamariamos si el getContador no fuera static
+        console.log(Empleado.getContador());
+
+        var empleado2 = new Empleado("Maria", "Perez", 4200);
+        console.log(empleado2.mostrarInfo());
+        // console.log(empleado2.getContador()); --> asi los llamariamos si el getContador no fuera static
+        console.log(Empleado.getContador());
+
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+[
+   {
+      "matricula": "Z0000X",
+      "marca": "Opel",
+      "modelo": "Corsa",
+      "color": "Rojo",
+      "precio": 20000,
+      "extras": "Airbag",
+      "codigoCliente": 100
+   },
+   {
+      "matricula": "Z0001X",
+      "marca": "Ford",
+      "modelo": "Probe",
+      "color": "Azul",
+      "precio": 22000,
+      "extras": "Antena electrica",
+      "codigoCliente": 101
+   },
+   {
+      "matricula": "Z0002X",
+      "marca": "Citroen",
+      "modelo": "Xantia",
+      "color": "Negro",
+      "precio": 24000,
+      "extras": "",
+      "codigoCliente": 102
+   },
+   {
+      "matricula": "Z0003X",
+      "marca": "Renault",
+      "modelo": "Clio",
+      "color": "Blanco",
+      "precio": 25000,
+      "extras": "",
+      "codigoCliente": 103
+   }
+]

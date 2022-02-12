@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> Nombre: </label>
+    <input type="text" id="nombre" name="nombre" />
+
+    <button onclick="guardarDatos()"> Guardar datos</button>
+    <button onclick="recuperarDatos()"> Recuperar datos</button>
+
+    <script>
+        function guardarDatos(){
+            // localStorage.setItem('nombre', document.getElementById("nombre").value);
+            localStorage.setItem('nombre', nombre.value);
+            // localStorage.nombre = nombre.value;
+            alert("Nombre guardado");
+        }
+
+        function recuperarDatos(){
+            var recuperado = localStorage.getItem('nombre');
+            // var recuperado = localStorage.nombre;
+
+            if (recuperado != undefined){
+                nombre.value = recuperado;
+            } else {
+                alert("Nombre no guardado");
+            }
+        }
+    </script>
+
+</body>
+</html>

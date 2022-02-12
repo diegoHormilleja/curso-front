@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/Persona.js"></script>
+    <script src="js/Empleado.js"></script>
+    <script src="js/Direccion.js"></script>
+
+</head>
+<body>
+    <script>
+        // Crear 2 empleados
+        var dir1 = new Direccion("Mayor", 32, "Madrid");
+        var dir2 = new Direccion("Del Pilar", 45, "Zaragoza");
+
+        var empleado1 = new Empleado("Juan", 616452125, "juan@gmail.com", dir1, 27 );
+
+        console.log(Empleado.getContador());
+
+        var empleado2 = new Empleado("Maria", 654123456, "maria@gmail.com", dir2, 32, 23000);
+
+        console.log(Empleado.getContador());
+
+        // Asignar a otra proyecto
+        empleado1.asignarProyecto("projectZ");
+
+        // Modificar el sueldo
+        empleado2.modificarSueldo(29999);
+
+        // Mostrar datos de empleados
+        console.log(empleado1.mostrarInformacion());
+        console.log(empleado2.mostrarInformacion());
+
+
+
+    </script>
+
+</body>
+</html>

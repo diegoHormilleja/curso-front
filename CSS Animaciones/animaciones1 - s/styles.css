@@ -1,0 +1,24 @@
+* {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+.container{
+    height: 400px;
+    background: slateblue;
+    padding: 30px;
+}
+
+.caja{
+    height: 100px;
+    width: 100px;
+    background: #025;
+    transition-property: background;
+    transition-duration: 1s;
+}
+
+.caja:hover {
+    background: lightgreen;
+}

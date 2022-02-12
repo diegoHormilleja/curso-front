@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="lib/math.js"></script>
+</head>
+
+<body>
+    <script type="module">
+        // Podemos importar todo el fichero
+        // import * as math from ".lib/math.js";
+        // console.log("2π = " + math.sum(math.pi, math.pi));
+
+        // O solo los elementos que nos interesan
+        import { sum, pi } from "./lib/math.js";
+        console.log("2π = " + sum(pi, pi));
+    </script>
+</body>
+
+</html>

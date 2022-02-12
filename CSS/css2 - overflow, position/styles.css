@@ -1,0 +1,74 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* INLINE-BLOCK */
+
+body{
+    background: grey;
+}
+
+#divPadre {
+    width: 70%;
+    height: 100px;
+    text-align:center;
+    background-color:blue;
+    position: sticky;
+    top: 0;
+    display: inline-block;
+
+
+    
+}
+#divHijo {
+    height:20px;
+    width:400px;
+     margin:0px auto;
+    background-color:red;
+
+}
+
+#caja2{
+    background-color: yellow;
+    width: 30%;
+    height: 100px;   
+    position: sticky;
+    top: 0;
+    display: inline-block;
+
+
+}
+
+
+.container{
+    margin: 20px;
+    border: 2px solid red;
+    width: 400px;
+    height: 400px;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    display: inline-block;
+}
+
+.container-img{
+    background: grey;
+    margin: 20px;
+    border: 2px solid red;
+    width: 400px;
+    height: 400px;
+    overflow: hidden;
+    display: inline-block;
+}
+
+img{
+    width: 1000px;
+    position: relative;
+    top: 50px;  
+    left: 20px;
+    outline: 2px solid yellow;
+
+}
+
+
+

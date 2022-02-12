@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // Crear un array con todos los telefonos de tipo string
+        var telefonos = ["+56-2-24215300", "+56 2 24215300", "+56-2 24215300", "+56 2-24215300", "56-2-2421530", "+56-2-242153000", "+34-2-24215300", "+56-2-24215A00"];
+
+        // crear una expresion para validar los telefonos
+        var expresion = /^\+56(\-2\-| 2 )\d{8}$/;
+
+        // Crear un bucle que recorra el array
+
+        for (var indice in telefonos) {
+            document.writeln("Telefono: " + telefonos[indice] + " : " + expresion.test(telefonos[indice]) + "<br/>");
+        }
+
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

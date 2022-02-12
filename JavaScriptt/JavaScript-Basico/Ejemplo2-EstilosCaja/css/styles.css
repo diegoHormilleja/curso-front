@@ -1,0 +1,10 @@
+#cuadrado{
+    width: 30%;
+    height: 150px;
+    background-color: darksalmon;
+    margin-bottom: 20px;
+}
+
+.cuadrado_borde{
+    border: 5px solid blue;
+}

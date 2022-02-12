@@ -1,0 +1,82 @@
+body{
+    margin: 0 auto;
+    width: 80%;
+}
+
+div{
+    float: left;
+    width: 30%;
+    height: 100px;
+    margin: 10px;
+    background-color: violet;
+}
+
+/* Gradientes lineales */
+
+#defecto{
+    /* to bottom */
+    background: linear-gradient(blue, violet, yellow);
+}
+
+#izd-dcha{
+    background: linear-gradient(to right, blue, violet, yellow);
+}
+
+#dcha-izd{
+    background: linear-gradient(to left, blue, violet, yellow);
+}
+
+#arriba{
+    background: linear-gradient(to top, blue, violet, yellow);
+}
+
+#diagonal-dcha{
+    background: linear-gradient(to bottom right, blue, violet, yellow);
+}
+
+#diagonal-izq{
+    background: linear-gradient(to top left, blue, violet, yellow);
+}
+
+/* Gradientes radiales */
+
+#centro{
+    background: radial-gradient(blue, violet, yellow);
+    height: 300px;
+}
+
+#espacios{
+    background: radial-gradient(blue 20%, violet 60%, yellow 70%);
+    width: 5%;
+    height: 50px;
+    weight: 50px;
+    border-radius: 50%;
+
+}
+
+#espacios:active{
+    background: repeating-radial-gradient(blue 5%, violet 10%, yellow 15%);
+}
+
+
+#forma-circle{
+    background: radial-gradient(circle, blue 20%, violet 60%, yellow 70%);
+    /* height: 600px; */
+}
+
+#forma-elipse{
+    background: radial-gradient(ellipse, blue, violet, yellow);
+}
+
+#repetir{
+    background: repeating-radial-gradient(blue 5%, violet 10%, yellow 15%);
+}
+
+#opacidad{
+    width: 75%;
+    height: 200px;
+    background: linear-gradient(to left, rgba(0,0,255,0) 30%, rgba(0,0,255,1) );
+}
+
+
+

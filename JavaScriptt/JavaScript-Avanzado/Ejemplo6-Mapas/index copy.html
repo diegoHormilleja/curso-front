@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Map --> almacenar elementos clave = valor
+        // Son iterables 
+
+        var numbers = [1, 5, 10, 15];
+        // var doubles = numbers.map(function (x) { return x * 2; });
+        var doubles = numbers.map(num => num * 2);
+
+        doubles.forEach(element => {
+            console.log(element);
+        })
+
+        ///
+
+        var numeros = [1, 4, 9];
+        var raices = numeros.map(Math.sqrt);
+
+        for (index in raices) {
+            console.log(raices[index]);
+        }
+
+        // 
+
+        var kvArray = [{ clave: 1, valor: 10 },
+        { clave: 2, valor: 20 },
+        { clave: 3, valor: 30 }];
+
+        for (index in kvArray) {
+            console.log(kvArray[index]);
+        }
+
+        var reformattedArray = kvArray.map(function (obj) {
+            var rObj = {};
+            rObj[obj.clave] = obj.valor;
+            return rObj;
+        })
+
+        for (index in reformattedArray) {
+            console.log(reformattedArray[index]);
+        }
+
+        //
+
+        var kvArray = [["clave1", "valor1"], ["clave2", "valor2"]];
+
+        // El constructor por defecto de Map para transforar un Array 2D (clave-valor) en un mapa
+        var miMapa = new Map(kvArray);
+
+
+
+        var map = Array.prototype.map;
+        var valores = map.call('Hello World', function (char) {
+            return char.charCodeAt(0);
+        });
+
+        for (index in valores) {
+            console.log(valores[index]);
+        }
+
+        //
+
+        var elems = document.querySelectorAll('select option:checked');
+        var values = [].map.call(elems, function (obj) {
+            return obj.value;
+        });
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

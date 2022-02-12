@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        "use strict";
+        const arr = [3, 4, 2, 5, 1, 6];
+        Object.freeze(arr);
+
+        const cloneObj = function (obj) {
+            return JSON.parse(JSON.stringify(obj));
+        }
+
+        const newNums = cloneObj(arr).sort();
+
+        console.log('JSON.parse(JSON.stringify(obj) --> ' + newNums);
+        console.log('arr --> ' + arr);
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

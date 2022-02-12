@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var conjunto = new Set();
+        conjunto.add("Hola");
+        conjunto.add("Hola"); // No lo agrega por estar duplicado
+        conjunto.add("Adios");
+        conjunto.add(1);
+        conjunto.add(false);
+        conjunto.add(5.7);
+
+        document.write("Numero de elementos: " + conjunto.size + "<br/");
+
+        // Volcar todo el set en un array
+        var miArray = [...conjunto];
+        document.write("Mi array: " + miArray + "<br/>");
+
+        // Otra forma de Volcar todo el set en un array
+        var otroArray = Array.from(conjunto);
+        document.write("Otro array: " + otroArray + "<br/");
+
+        var equipoA = new Set(["rojo", "azul", "verde", "negro"]);
+        var equipoB = new Set(["azul", "rosa", "blanco", "verde", "amarillo"]);
+
+        document.write("<br/>");
+
+        // Interseccion de conjuntos (elementos comunes)
+        var comunes = new Set([...equipoA]
+        .filter(x => equipoB.has(x)));
+        comunes.forEach(ele => document.write(ele + " - "));
+        document.write("<br/>");
+
+        // Diferencia de conjuntos (elementos que no son comumes)
+        var diferentes = new Set([...equipoB]
+        .filter(x => !equipoA.has(x)));
+        diferentes.forEach(ele => document.write(ele + " "));
+        document.write("<br/>");
+        
+        //Union de conjuntos
+        var union = new Set([...equipoA, ...equipoB]);
+        union.forEach(ele => document.write(ele + " - "));
+
+
+    </script>
+</body>
+</html>

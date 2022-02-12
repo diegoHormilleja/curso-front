@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // creating a promise that can run asynchronously
+        let resultado = 0;
+        let num = 10;
+
+        for (let i = num ** 7; i >= 0; i--) {
+            resultado += Math.atan(i) * Math.tan(i);
+        }
+
+        console.log(resultado);
+
+        const massiveProcess = function (num) {
+            return new Promise(function (resolve, reject) {
+                if (isNaN(num)) {
+                    reject("Please enter a number!");
+                } else {
+                    let result = 0;
+                    setTimeout(function () {
+                        for (let i = num ** 7; i >= 0; i--) {
+                            result += Math.atan(i) * Math.tan(i);
+                        };
+                        resolve(result);
+                    }, 0);
+                }
+            })
+        };
+
+        massiveProcess(10)
+            .then(result => {
+                console.log('entro aqui then')
+
+                console.log(result);
+            })
+            .catch(err => {
+                console.log('entro aqui catch')
+                throw err;
+            });
+
+        //
+
+        const timeoutPromise = new Promise((resolve, reject) => {
+            setTimeout(() => {
+                // call resolve() to signal that async operation is complete
+                resolve("Called after three seconds!");
+            }, 3000);
+        });
+        timeoutPromise.then(console.log);
+        timeoutPromise.then(result => {
+            console.log(result);
+        });
+
+
+
+        // This is an implementation of a Promise-based function that adds two numbers x and y:
+
+        function addAsync(x, y) {
+            return new Promise(
+                (resolve, reject) => { // (A)
+                    if (x === undefined || y === undefined) {
+                        reject(new Error('Must provide two parameters'));
+                    } else {
+                        resolve(x + y);
+                    }
+                });
+        }
+
+        addAsync(0)
+            .then(result => {
+                console.log('el resultado es --> ' + result);
+            })
+            .catch(err => {
+                throw err;
+            })
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

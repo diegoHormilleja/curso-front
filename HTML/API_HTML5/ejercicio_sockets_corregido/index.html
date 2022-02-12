@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWorker</title>
+</head>
+
+<body>
+    <p>Hilos dicen: <output id="resultado"></output> </p>
+    <p>Hilos dicen: <output id="resultado2"></output> </p>
+
+    <button onclick="arrancarWorker()"> Enviar Hola </button>
+    <button onclick="arrancarTrabajador()"> Enviar adios </button>
+
+    <script>
+        var worker;
+        var trabajador;
+        var palabra = "hola";
+
+        function arrancarWorker() {
+
+            worker = new Worker("js/tarea.js");
+            postMessage("HILO 1 DICE " + palabra);
+            console.log("HILO 1 DICE " + palabra)
+
+            // Escuchar los mensajes recibidos de tarea y procesarlos
+            worker.onmessage = function (e) {
+
+                document.getElementById("resultado").innerHTML = e.data;
+                worker.terminate;
+            }
+        }
+
+        function arrancarTrabajador() {
+
+            palabra = "adios";
+
+            worker = new Worker("js/tarea.js");
+            postMessage("HILO 2 DICE " + palabra);
+            console.log("HILO 2 DICE " + palabra)
+
+            // Escuchar los mensajes recibidos de tarea y procesarlos
+            worker.onmessage = function (e) {
+
+                document.getElementById("resultado2").innerHTML = e.data;
+                worker.terminate;
+            }
+        }
+
+        function pararWorker() {
+            // Finalizar la tarea
+            worker.terminate();
+            trabajador.terminate();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+h2 {
+    margin-left: 10px;
+}
+
+/* :hover */
+
+.caja1 {
+    margin: 10px;
+    height: 200px;
+    width: 200px;
+    background: slateblue;
+    /* transition: all 1s, width: .4s; */
+    transition: background .2s, height 1s, width 1s;
+}
+
+.caja1:hover {
+    background: darkslateblue;
+    height: 300px;
+    width: 300px;
+}
+
+hr{
+    margin: 10px;
+}
+
+
+.caja2 {
+    margin: 10px 20px;
+
+    padding: 20px;
+    background-color: yellow;
+    color: #000;
+
+}
+
+.caja2:hover {
+    padding: 20px;
+    background-color: slateblue;
+    color: #fff;
+}
+
+/* :link */
+
+.enlace{
+    margin: 30px;
+    display: block;
+
+}
+
+.enlace:link {
+    color: red;
+
+}
+
+
+/* :active */
+
+.caja3{
+    margin: 40px;
+    width: 250px;
+    height: 250px;
+    background: red;
+}
+
+.caja3:active {
+    background: blue;
+    width: 400px;
+}
+
+
+/* :focus */
+
+.caja4{
+    margin: 40px;
+    height: 30px;
+    background: lightgrey;
+    transition: background .4s, padding .4s;
+}
+
+.caja4:focus {
+    background: white;
+    padding: 20px;
+}
+
+/* :lang */
+
+.caja5{
+    margin: 25px;
+}
+
+.caja5 b:lang(en) {
+    background: red;
+    padding: 20px;
+}
+
+
+
+

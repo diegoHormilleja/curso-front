@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        function comprobar(){
+            switch(miForm.edad.value){
+                case "18":
+                    alert("Eres menor de edad");
+                    break;
+
+                case "40":
+                    alert("Estas en edad de trabajar");
+                    break;
+
+                case "65":
+                    alert("Estas a punto de jubilarte");
+                    break;
+                
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <form action="" id="miForm">
+        <label for=""> Selecciona edad: </label>
+        <input type="radio" name="edad" value="18" onchange="comprobar()" /> Menor de 18 <br/>
+        <input type="radio" name="edad" value="40" onchange="comprobar()" /> Entre 18 y 65 <br/>
+        <input type="radio" name="edad" value="65" onchange="comprobar()" /> Mayor de 65 <br/>
+
+
+    </form>
+</body>
+</html>

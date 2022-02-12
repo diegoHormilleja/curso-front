@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>webSocket
+    </title>
+</head>
+<body>
+    <button onclick="abrir()"> Abrir socket </button>
+    <button onclick="cerrar()"> Cerrar socket </button>
+
+    <script>
+        // Variable que almacena el websocket
+        var ws;
+
+        function abrir() {
+            // Crear el socket
+            ws = new WebSocket("ws://html5rocks.webcoket.org/echo");
+
+            ws.onopen = function(){  // funciones anonimas, funcion sin nombre
+                ws.send("Saludos desde mi socket");
+                alert("Mensaje enviado");
+            }
+
+            ws.onmessage = function(){
+                var mensaje = event.data;
+                alert(mensaje);
+            }
+
+            ws.onclose = function(){
+                alert("Socket cerrado");
+            }
+
+        }
+
+        function cerrar() {
+            ws.close();
+
+        }
+
+    </script>
+
+</body>
+</html>

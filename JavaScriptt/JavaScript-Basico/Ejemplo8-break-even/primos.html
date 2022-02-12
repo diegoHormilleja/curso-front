@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        var contador = 0;
+        // Mostrar los numeros primos del 1 al 100
+        etiqueta_numeros;  // estoy dando nombre al bucle
+        for(var numero = 1; numero <= 100; numero++){
+            console.log("Probando el numero... " + numero);
+
+            // Partimos de la premisa que teodo numero es primo
+            // salvo que se demuestre lo contrario
+            var esPrimo = true;
+
+            // Divisores desde 2 hasta numero-1
+            for(var divisor=2; divisor <= (numero/2); divisor++){
+                contador++;
+                console.log(divisor + " es divisor?");
+                if (numero % divisor == 0){
+                    esPrimo = false;
+                    // Damos por termiando el bucle de los divisores
+                    // break;
+                }
+            }
+        }
+
+
+
+
+
+
+            for (var i = 2; i <= 100; i++) {
+                var primo = 1;
+                var contador = 2;
+
+                while (contador <= i / 2 && primo) {
+                    if (i % contador == 0) {
+                        primo = 0;
+                    }
+                    contador++;
+                }
+
+                if (primo) {
+                    document.write(i + " es primo" + "<br />");
+                }
+            }
+
+
+        // Divisores desde 2 hasta numero -1
+    </script>
+</head>
+
+<body>
+
+</body>
+
+</html>

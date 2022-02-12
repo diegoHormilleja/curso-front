@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+    <div id="resultado"></div>
+
+    <label for="cars">Choose a car:</label>
+
+    <select name="cars" id="cars">
+    </select>
+
+    <select name="" id="combo" name="parametro"></select>
+
+    </select>
+
+    <script>
+        for(var i=10; i>=1; i--){
+            document.getElementById("resultado").innerHTML += i + "<br/>";
+        }
+
+        //
+
+        var yroption = "<option value='0'> select </option>";
+
+        for(var i=10; i>=1; i--){
+            yroption += "<option value='"+ i +"'>" + i + "</option>";
+        }
+
+        console.log(yroption);
+
+        document.getElementById('cars').innerHTML = yroption;
+
+        //
+
+        for(var i=1; i<=6; i++){
+            document.getElementById("combo").innerHTML += "<option value='" + i + "'>Opcion" + i + "</option>";
+        }
+        
+        /* <option value='1'> Opcion 1 </option> */
+
+    </script>
+</body>
+</html>

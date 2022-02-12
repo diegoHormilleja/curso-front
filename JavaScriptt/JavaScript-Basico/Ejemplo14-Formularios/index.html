@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        label {
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
+    <script>
+        function mostrar() {
+            console.log("Nombre: " + formulario.nombre.value);
+            console.log("Password: " + formulario.pw.value);
+            console.log("Campo oculto: " + formulario.id.value);
+            console.log("Color favorito: " + formulario.color.value);
+
+            for (var i in document.getElementsByName("aficion")) {
+                if (document.getElementsByName("aficion")[i].checked) {
+                    console.log(document.getElementsByName("aficion")[i].value);
+                }
+            }
+
+
+
+            for (var i in document.getElementById("cursos").options){
+                if (document.getElementById("cursos").options[i].selected){
+                    console.log("Cursos: " + document.getElementById("cursos").options[i].text);
+                }
+            }
+
+            event.preventDefault();
+        };
+
+
+    </script>
+</head>
+
+<body>
+    <!-- POST; los datos del formulario viajan en el cuerpo de la peticion
+         GET; los datos viajan como parametros de la peticion ?parametro=valor 
+        Cuando utilizarlo?
+        GET -> solo para consultas (idempotente), datos no privados, datos no demasiado largos
+        POST -> para cambios en el servidor (alta, modificar, delete), datos privados, muchos datos-->
+    <form action="" method="post" id="formulario">
+        <fieldset>
+            <legend>Datos personales</legend>
+
+            <label> Nombre: </label>
+            <input type="text" id="nombre" name="nombre" size="50" placeholder="Escribe tu nombre ..." /> <br />
+
+            <label> Password: </label>
+            <input type="password" name="pw" /> <br />
+
+            <label> Apellido: </label>
+            <input type="text" name="apellido" list="apellidosList" />
+            <datalist id="apellidosList">
+                <option value="Lopez" label="Lopez" />
+                <option value="Lara">Lara</option>
+                <option value="Laiz">Laiz</option>
+                <option value="Sanz" label="Sanz" />
+                <option value="Sanchez">Sanchez</option>
+                <option value="Sevilla">Sevilla</option>
+            </datalist><br />
+
+            <label> Edad: </label>
+            <input type="number" name="edad" min="0" max="110" /> <br />
+
+            <label> Email: </label>
+            <input type="email" name="email" /> <br />
+
+            <label> Sitio web: </label>
+            <input type="url" name="url" /> <br />
+
+            <label> Telefono: </label>
+            <input type="tel" name="telefono" size="9" pattern="[+]{1}[6-7]{1}[0-9]{8}"
+                title="Debe tener 9 digitos y comenzar por + 6 รณ 7" /> <br />
+
+            <label> Fecha de nacimiento: </label>
+            <input type="date" name="nacimiento" /> <br />
+
+            <input type="hidden" name="id" value="3" /> <br />
+
+            <label>Adjunto...</label>
+            <input type="file" name="fichero" /> <br />
+
+            <label>Sexo:</label>
+            <input type="radio" name="sexo" value="h" checked="checked" /> <label>Hombre</label>
+            <input type="radio" name="sexo" value="m" /> <label>Mujer</label> <br />
+        </fieldset>
+
+
+        <label> Fecha Reserva: </label>
+        <input type="datetime-local" name="reserva" /> <br />
+
+        <label> Hora entrada: </label>
+        <input type="time" name="hora" /> <br />
+
+        <label> Color favorito: </label>
+        <input type="color" name="color" /> <br />
+
+
+        <label> Hobbies: </label>
+        <input type="checkbox" name="aficion" value="cine" /> <label> Cine </label>
+        <input type="checkbox" name="aficion" value="musica" /> <label> Musica </label>
+        <input type="checkbox" name="aficion" value="teatro" /> <label> Teatro </label>
+        <input type="checkbox" name="aficion" value="danza" /> <label> Danza </label> <br />
+
+        <fieldset>
+            <legend>Datos academicos</legend>
+
+            <label> Nivel de estudios: </label>
+            <select name="estudios">
+                <option value="nada"> Sin estudios </option>
+                <option value="eso" selected="selected"> ESO </option>
+                <option value="medio"> Grado Medio </option>
+                <option value="superior"> Grado Superior </option>
+                <option value="grado"> Grado </option>
+            </select><br />
+
+            <label> Cursos: </label>
+            <select id="cursos" name="cursos" multiple="multiple">
+                <option value="ofi"> Ofimatica </option>
+                <option value="html"> HTML </option>
+                <option value="css"> CSS </option>
+                <option value="angular"> Angular </option>
+                <option value="react"> React </option>
+            </select><br />
+        </fieldset>
+
+        <label> Danos tu valoracion: </label>
+        <textarea cols="100" rows="10">Algo ...</textarea> <br />
+
+        <input type="submit" value="Enviar" onclick="mostrar()" />
+        <input type="reset" value="Limpiar" />
+    </form>
+</body>
+
+</html>

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //9. Write a JavaScript function which accepts an argument and returns the type
+
+        const tellMeType = (arg) => typeof (arg);
+
+        console.log(tellMeType(false));
+        console.log(tellMeType(undefined));
+        console.log(tellMeType(12));
+        console.log(tellMeType('false'));
+
+
+        // 11. Write a JavaScript function which will take an array of numbers stored and find the second lowest and second greatest numbers, respectively.
+
+        const once = (arr) => {
+            const sorted = arr.slice().sort((a, b) => a - b);
+            console.log(sorted);
+            sorted.shift();
+            sorted.pop();
+            const myArr = [];
+            let x = sorted.length;
+            console.log(x);
+            myArr.push(sorted[0], sorted[x - 1]);
+
+
+            return myArr;
+        }
+
+        console.log(once([100, 3, 202, 33, 55, 66]));
+
+
+        // 14. Write a JavaScript function to convert an amount to coins.
+
+        function amountTocoins(amount, coins) {
+
+            if (amount === 0) {
+                return [];
+            }
+            else {
+                if (amount >= coins[0]) {
+                    left = (amount - coins[0]);
+                    return [coins[0]].concat(amountTocoins(left, coins));
+                }
+                else {
+                    coins.shift();
+                    return amountTocoins(amount, coins);
+                }
+            }
+        }
+
+        console.log(amountTocoins(460, [25, 10, 5, 2, 1]));
+
+
+
+        // 16. Write a JavaScript function to extract unique characters from a string.
+
+        const uniqueChar = (str) => {
+            // const myArr = str.split("");
+            // const set = new Set(myArr);
+            // const strUnique = [...set].join('');
+            // return strUnique;
+            uniqCh = "";
+
+            for (let i = 0; i < str.length; i++) {
+                if (uniqCh.indexOf(str[i]) == -1) {
+                    uniqCh += str[i];
+                }
+
+            }
+
+            return uniqCh;
+        }
+
+        console.log(uniqueChar("aldkfakdfle"));
+
+
+
+        // 17. Write a JavaScript function to  get the number of occurrences of each letter in specified string.
+
+        // const getOccurrences = str => {
+        //     const myArr = str.split("");
+        //     myArr.sort();
+        //     console.log(myArr);
+        //     characteres = {};
+        //     let contador = 0;
+        //     let charAux = myArr[0];
+
+        //     for (let i = 0; i < myArr.length; i++) {
+        //         if (myArr[i] == charAux) {
+        //             contador++;
+        //             console.log(contador);
+        //         } else {
+        //             characteres.charAux = contador;
+        //             charAux = myArr[i];
+        //             contador = 0;
+        //         }
+
+        //     }
+
+        //     console.log(characteres);
+
+        // }
+
+        // getOccurrences('zaragoza la blela');
+
+
+        function Char_Counts(str1) {
+            var uchars = {};
+            str1.replace(/\S/g, function (l) { uchars[l] = (isNaN(uchars[l]) ? 1 : uchars[l] + 1); });
+
+            console.log(str1);
+
+            return uchars;
+        }
+        console.log(Char_Counts("The quick brown fox jumps over the lazy dog"));
+
+
+        // 18. Write a function for searching JavaScript arrays with a binary search
+
+        function array_binarySearch(narray, delement) {
+            var mposition = Math.floor(narray.length / 2);
+
+            if (narray[mposition] === delement) {
+                return mposition;
+            }
+            else if (narray.length === 1) {
+                return null;
+            }
+            else if (narray[mposition] < delement) {
+                var arr = narray.slice(mposition + 1);
+                var res = array_binarySearch(arr, delement);
+                if (res === null) {
+                    return null;
+                }
+                else {
+                    return mposition + 1 + res;
+                }
+            }
+            else {
+                var arr1 = narray.slice(0, mposition);
+                return array_binarySearch(arr1, delement);
+            }
+        }
+
+        var myArray = [1, 2, 3, 5, 6, 7, 10, 11, 14, 15, 17, 19, 20, 22, 23];
+        console.log(array_binarySearch(myArray, 6));
+
+        // OTRA MANERA
+
+        let recursiveFunction = function (arr, x, start, end) {
+
+            // Base Condition
+            if (start > end) return false;
+
+            // Find the middle index
+            let mid = Math.floor((start + end) / 2);
+
+            // Compare mid with given key x
+            if (arr[mid] === x) return true;
+
+            // If element at mid is greater than x,
+            // search in the left half of mid
+            if (arr[mid] > x)
+                return recursiveFunction(arr, x, start, mid - 1);
+            else
+
+                // If element at mid is smaller than x,
+                // search in the right half of mid
+                return recursiveFunction(arr, x, mid + 1, end);
+        }
+
+        // Driver code
+        let arr = [1, 3, 5, 7, 8, 9];
+        let x = 5;
+
+        if (recursiveFunction(arr, x, 0, arr.length - 1))
+            document.write(x + " --> Element found!<br>");
+        else document.write(x + " --> Element not found!<br>");
+
+        x = 6;
+
+        if (recursiveFunction(arr, x, 0, arr.length - 1))
+            document.write(x + " --> Element found!<br>");
+        else document.write(x + " --> Element not found!<br>");
+
+
+    </script>
+</body>
+
+</html>

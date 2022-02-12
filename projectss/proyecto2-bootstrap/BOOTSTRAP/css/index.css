@@ -1,0 +1,106 @@
+body {
+    /* background: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(238, 130, 238, 0.514), yellow); */
+    background-color: #E9ECEF;
+}
+
+.nav-background {
+    /* background: linear-gradient(to right, rgba(0, 0, 255, 0.3), rgba(238, 130, 238, 0.514), yellow); */
+}
+
+.ciudades {
+    width: 100vw;
+    /* position: relative; */
+    left: 0;
+    right: 0;
+    overflow-x: auto;
+    display: flex;
+    /* padding: 8px 8px 32px 15px; */
+}
+
+.navbar {
+    background-color: #929FBA;
+    height: 75px;
+}
+
+.navbar .btn {
+    height: 40px;
+    border-radius: 5px;
+    background-color: white;
+}
+
+.nav_button li:hover,
+.nav_button a:hover {
+    font-size: 25px;
+    transition: font-size 0.5s, width 2s, height 4s, background-color 2s;
+}
+
+.nav_button li,
+a {
+    color: black;
+    padding-right: 75px;
+    font-size: 20px;
+}
+
+.videoDiv2 {
+    width: 100%;
+    position: relative;
+    /* background: url("https://enjoy.es/wp-content/uploads/2020/02/metodo-enjoy-motivacion-1080.mov"); */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* This has been changed */
+
+.video2 {
+    /* position: fixed; */
+    width: 100%;
+    height: 100%;
+}
+
+
+/* This has been changed */
+
+.videoMessage2 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+
+.videoMessage2 {
+    color: white;
+    font-size: 50px;
+}
+
+.carousel_buttons li {
+    border-radius: 12px;
+    width: 20px;
+    height: 20px;
+    background-color: white;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 2px 2px 2px grey;
+}
+
+.footer {
+    background-color: #E9ECEF;
+    border-top: 3px solid black;
+}
+
+.footer .nav-item {
+    display: inline-block;
+}
+
+.footer .nav-item:hover {
+    text-decoration: none;
+}

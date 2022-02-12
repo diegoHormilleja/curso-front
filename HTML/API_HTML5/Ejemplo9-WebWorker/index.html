@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWorker</title>
+</head>
+
+<body>
+    <p>Contador: <output id="resultado"></output> </p>
+
+    <button onclick="arrancarWorker()"> Comenzar contador </button>
+    <button onclick="pararWorker()"> Parar contador </button>
+
+    <script>
+        var worker;
+
+        function arrancarWorker() {
+
+            if (typeof (worker) == "undefined") {
+                // Crear el worker
+                worker = new Worker("js/tarea.js");
+            }
+
+            // Envio el valor del contador actual a la tarea
+            if (localStorage.numero != undefined) {
+                var i = localStorage.numero;
+            }
+
+            // Escuchar los mensajes recibidos de tarea y procesarlos
+            worker.onmessage = function (e) {
+                document.getElementById("resultado").innerHTML = e.data;
+                localStorage.numero = e.data;
+            }
+        }
+
+        function pararWorker() {
+            // Finalizar la tarea
+            worker.terminate();
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,24 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+*,
+*::before,
+*::after{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+
+
+.red {
+  color: red;
+}
+
+.grande {
+  font-size: 1.4em;
+}

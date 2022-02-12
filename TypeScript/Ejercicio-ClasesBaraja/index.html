@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/Palos.js"></script>
+    <script src="js/Numeracion.js"></script>
+    <script src="js/Carta.js"></script>
+</head>
+<body>
+    <script>
+        var mano = [
+            new Carta(Numeracion.SOTA, Palos.OROS),
+            new Carta(Numeracion.SIETE, Palos.ESPADAS),
+            new Carta(Numeracion.CUATRO, Palos.COPAS),
+            new Carta(Numeracion.REY, Palos.BASTOS),
+            new Carta(Numeracion.TRES, Palos.OROS)
+        ];
+
+        // document.writeln(...mano);
+        for(carta of mano){
+            document.writeln(carta.toString() + "<br/>");
+        }
+    </script>
+</body>
+</html>

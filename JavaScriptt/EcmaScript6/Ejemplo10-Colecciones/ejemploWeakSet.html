@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        var weakSet = new WeakSet(); //Solo permite almacenar objetos
+        //Por eso no podemos usarlo asi
+        //weakSet.add("Hola");
+        weakSet.add(new String("Hola"));
+        weakSet.add(new String("Adios"));
+        weakSet.add([1, 6, 2, 5]);
+        weakSet.add(new Boolean(false));
+        var numero = new Number(5.7);
+        weakSet.add(numero); //Al ponerlo entre corchetes entiende que es un array y lo da por valido
+
+        //No lo puedo recorrer porque no es iterable
+        /*for(let ele in weakSet){
+            document.write(weakSet[ele] + "<br/>")
+        }*/
+
+        document.write("¿Tiene ese elemento? " + weakSet.has(numero) + "<br/>");
+        document.write("¿Se ha borrado el elemento? " + weakSet.delete(numero) + "<br/>");
+        document.write("¿Tiene ese elemento ? " + weakSet.has(numero) + "<br/>");
+
+
+    </script>
+</body>
+
+</html>

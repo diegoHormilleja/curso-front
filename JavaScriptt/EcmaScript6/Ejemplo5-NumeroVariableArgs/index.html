@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Parametro rest -> numero variable de argumentos
+        // ...nombreArgumento
+        function sumar(...numeros){
+
+            // lo procesamos como si fuese un array
+            let suma = 0;
+            for(i in numeros){
+                suma += numeros[i];
+            }
+            return suma;
+        }
+
+        console.log("sumar(1,3,6): " + sumar(1,3,6));
+        console.log("sumar(1,3,6,7,2,4): " + sumar(1,3,6,7,2,4));
+        console.log("(sumar(1): " + sumar(1));
+        console.log("sumar(): " + sumar());
+
+        // el parametro rest (...numeros) deber ir el ultimo y ser unico
+        function multiplicar(n1, n2, ...numeros){
+            let resultado = n1*n2;
+            for(i in numeros){
+                resultado *= numeros[i];
+            }
+            return resultado;
+        }
+
+    </script>
+</body>
+</html>

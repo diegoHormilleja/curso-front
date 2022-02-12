@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pintar-texto</title>
+    <style>
+        canvas{
+            background-color: lightgoldenrodyellow;
+            width: 50%;
+            height: 200px;
+        }
+
+        body{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body onload="dibujar()"> 
+    <canvas id="lienzo">
+        Su navegador no soporta HTML5
+    </canvas>
+
+    <script>
+        function dibujar() {
+            // Obtener el objeto canvas
+            var canvas = document.getElementById("lienzo");
+
+            // Acceder a su contexto
+            var ctxCanvas = canvas.getContext("2d");
+
+            // Mostrar un texto relleno
+            ctxCanvas.fillStyle = "green";
+            ctxCanvas.font = "bold 25px Arial";
+            ctxCanvas.textAlign = "center";
+            ctxCanvas.fillText("Saludos!!!", 100, 50);
+
+            // Mostrar un texto perfilado 
+            ctxCanvas.strokeStyle = "blue";
+            ctxCanvas.strokeText("Saludos!!!", 200, 100);
+        }
+    </script>
+</body>
+</html>

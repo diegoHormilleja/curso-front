@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <title>DWEC05</title>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- info -->
+        <div class="container-info">
+            <h1 class="container-info-titulo">xCOMMERCIAL </br> PROPERTIES FOR SALE</h1>
+            <p class="container-info-parrafo">Sign up to get teh latest list of commercial real estate properties for
+                sale, delivered weekly to your
+                inbox</p></br>
+            <p class="container-info-parrafo">Questions? Call 888-770-7332</p>
+        </div>
+
+
+        <!-- form -->
+        <form id="formcontacto" action="action.php" method="post">
+
+            <h4 class="form-titulo">Get FREE Commercial Listing Alerts</h4>
+
+
+            <div class="grid-container">
+
+                <div class="grid-item">
+                    <p class="form-parrafo">*Required field</p>
+                </div>
+
+                <div class="grid-item">
+                    <input type="text" id="nombre" name="nombre" maxlength="125" placeholder="NOMBRE*">
+                </div>
+
+                <div class="grid-item">
+                    <input type="text" id="apellido" name="apellido" maxlength="125" placeholder="APELLIDO*">
+                </div>
+
+                <div class="grid-item">
+                    <input type="text" id="segundoApellido" name="segundoApellido" maxlength="125"
+                        placeholder="SEGUNDO APELLIDO*">
+                </div>
+
+                <div class="grid-item">
+                    <input type="text" id="telefono" name="telefono" maxlength="50" placeholder="TELEFONO*">
+                </div>
+
+                <div class="grid-item">
+                    <input type="number" id="edad" name="edad" placeholder="EDAD*">
+                </div>
+
+                <div class="grid-item">
+                    <input type="text" id="nif" name="nif" maxlength="125" placeholder="NIF*">
+                </div>
+
+                <div class="grid-item">
+                    <input type="text" id="email" name="email" maxlength="225" placeholder="EMAIL*">
+                </div>
+
+                <div class="grid-item">
+                    <textarea id="comentarios" name="comentarios" rows="5" cols="36"
+                        placeholder="COMENTARIOS*"></textarea>
+                </div>
+
+                <div class="grid-item">
+                    <input type="submit" value="Enviar">
+                </div>
+
+            </div>
+
+
+        </form>
+
+
+    </div>
+
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.js"></script>
+
+    <script src="js/index.js"></script>
+
+
+</body>
+
+</html>

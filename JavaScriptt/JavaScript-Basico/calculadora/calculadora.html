@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/styles.css"/>
+    <script src="js/script.js"></script>
+</head>
+<body>
+    <div>
+        <button onclick="calc()" value="1" id="boton"> 1 </button>
+        <button onclick="calc2()" value="2" id="boton2"> 2 </button>
+        <button onclick="calc3()" value="3" id="boton3"> 3 </button>
+    </div>
+    <div>
+        <button onclick="calc4()" value="4" id="boton4""> 4 </button>
+        <button onclick="calc5()" value="5" id="boton5""> 5 </button>
+        <button onclick="calc6()" value="6" id="boton6""> 6 </button>
+    </div>
+
+    <div>
+        <button onclick="calc7()" value="7" id="boton7""> 7 </button>
+        <button onclick="calc8()" value="8" id="boton8""> 8 </button>
+        <button onclick="calc9()" value="9" id="boton9""> 9 </button>
+    </div>
+
+    <div>
+        <input type="number" id="calc" name="calc"/>
+    </div>
+
+
+    <div>
+        <label for=""> Numero 1: </label>
+        <input type="number" id="numero" name="numero" placeholder="Introduce numero"/>
+    </div>
+    <div>
+        <label for=""> Numero 2: </label>
+        <input type="number" id="numero2" name="numero2" placeholder="Introduce numero"/>
+    </div>
+
+
+    <div>
+        <button onclick="suma()"> + </button>
+        <button onclick="resta()"> - </button>
+        <button onclick="multiplicacion()"> * </button>
+        <button onclick="division()"> / </button>
+    </div>
+
+    <div>
+        <label for=""> Resultado: </label>
+        <label id="resultado"></label>
+    </div>
+
+</body>
+</html>

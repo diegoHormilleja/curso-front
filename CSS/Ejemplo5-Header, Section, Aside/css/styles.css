@@ -1,0 +1,76 @@
+body{
+    margin: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333333;
+}
+
+#contenido{
+    width: 980px;
+    margin: 0 auto;
+}
+
+header{
+    width: 980px;
+    height: 120px;
+    color: white;
+    background: steelblue url(../../images/logo.jpg) 0 0 no-repeat;
+    background-size: 15%;
+}
+
+header h1{
+    text-align: center;
+}
+
+nav{
+    float: left;
+    width: 980px;
+    height: 60px;
+    background-color: lightgrey;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 5px;
+    box-shadow: 5px 5px 3px grey;
+}
+
+section{
+    float: left;
+    width: 775px;
+    height: 402px;
+    background-color: moccasin;
+}
+
+article{
+    float: left;
+    width: 760px;
+    min-height: 120px;
+    background-color: rgb(189, 159, 107);
+    border-bottom: 1px solid moccasin;
+}
+
+aside{
+    float: right;
+    width: 200px;
+    height: 195px;
+    background-color:skyblue;
+    background: linear-gradient(to bottom right, skyblue, rgb(38, 130, 167), rgb(6, 72, 99));
+    border-bottom: 1px solid moccasin;
+    border-radius: 15px;
+    margin-bottom: 5px;
+    box-shadow: 5px 5px 5px steelblue;
+    opacity: .5;
+}
+
+
+footer{
+    margin-top: 5px;
+    float: left;
+    width: 980px;
+    height: 80px;
+    background-color: gold;
+}
+
+footer p{
+    text-align: right;
+}
+
+

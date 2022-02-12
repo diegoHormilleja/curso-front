@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dibujar-pentagono</title>
+    <style>
+        canvas{
+            background-color: lightgoldenrodyellow;
+            width: 50%;
+            height: 200px;
+        }
+
+        body{
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body onload="dibujar()">
+    <canvas id="lienzo">
+        Su navegador no soporta HTML5
+    </canvas>
+
+    <script>
+        function dibujar(){
+            // Objtener el objeto canvas
+            var canvas = document.getElementById("lienzo");
+
+            // Acceder a su contexto
+            var ctxCanvas = canvas.getContext("2d");
+
+            // Pintar un rectangulo rojo
+            ctxCanvas.fillStyle = "rgb(0,255,122)";
+            ctxCanvas.beginPath();
+            ctxCanvas.moveTo(50,5);
+            ctxCanvas.lineTo(75,60);
+            ctxCanvas.lineTo(65,125);
+            ctxCanvas.lineTo(35,125);
+            ctxCanvas.lineTo(25,60);
+            ctxCanvas.closePath();
+            
+            ctxCanvas.fill();
+        }
+    </script>
+    
+</body>
+</html>

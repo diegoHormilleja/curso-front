@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Mi primera pagina</title>
+        <link href="css/estilos.css" rel="stylesheet">
+        <style>
+            .rojo{color: #F00;}
+            #e4{color:fuchsia}
+
+            h2{color: rgb(0, 26, 255);}
+
+            fieldset{width: 50%;}
+
+        </style>
+    </head>
+    <body>
+
+        <a href="http://google.es"> Ir a Google </a><br/>
+        <a href="http://marca.es"> Leer Marca </a><br/>
+
+
+        <fieldset>
+            <legend> Ejemplo </legend>
+
+            <p style="color: chocolate; font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> 
+                Aqui ira el contenido de la pagina </br>
+                <b><i> Todo lo que se ve </i></b> <br/>
+                <span style="font-style: italic; font-weight: bold;"> Todo lo que se ve </span>
+            </p>
+    
+            brrrrrrrrr
+    
+            <h1 class="rojo"> Encabezado 1 </h1>
+            <h2 style="color:aqua"> Encabezado 2 </h2>
+            <h3> Encabezado 3 </h3>
+            <h4 id="e4"> Encabezado 4 </h4>
+            <h5> Encabezado 5 </h5>
+            <h6> Encabezado 6 </h6>
+
+        </fieldset>
+
+
+
+        <h2> Listas con viñetas (no ordenadas) </h2>
+        <!-- type puede ser circle, square, disk (opcion por defecto) -->
+        <ul type="circle"> 
+            <li> Aceite </li>
+            <li> Leche </li>
+            <li> Naranjas </li>
+        </ul>
+
+        <h2> Listas ordenadas </h2>
+                <!-- type puede ser 1, A, a, I, i -->
+        <ol type="a">
+            <li> Rojo </li>
+            <li> Verde </li>
+        </ol>
+        Parrafo dentro de mi lista
+        <ol type="a" start="3">
+            <li> Azul </li>
+            <li> Negro </li>
+        </ol>
+
+        <h2> Listas de definicion </h2>
+        <dl>
+            <dt> HTML </dt>
+            <dd> Metalenguaje para mostrar contenido web </dd>
+
+            <dt> CSS </dt>
+            <dd> Lenguaje para manejar estilos en la pagina </dd>
+        </dl>
+
+
+    </body>
+</html>

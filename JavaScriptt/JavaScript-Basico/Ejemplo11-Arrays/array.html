@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // crear un array con 8 numeros sin ordenar
+        var array = new Array(1,6,8,2,4,9,3,7);
+
+        // Mostrar array
+        document.write("Array: " + array + "<br/>");
+
+        // Mostrar el array invertido
+        document.write("Array invertido: " + array.reverse() + "<br/>");
+
+        // Array ordenado ascendente
+        document.write("Array ascendente: " + array.sort() + "<br/>");
+
+        // Ordenado descendente
+        document.write("Array descendente: " + array.sort().reverse() + "<br/>");
+
+        // Mostrar los elementos separados |
+        document.write("Join: " + array.join('|') + "<br/>");
+
+        // Mostrar los elementos de 3 a 5
+        document.write("Elementos de 3 a 5: " + array.slice(3,5) + "<br/>");
+
+        // Mostrar los elementos de 4 al final
+        document.write("Elementos del 4 hasta el final: " + array.slice(4) + "<br/>");
+
+        // Crea otro array
+        var letras = ['a', 'b', 'c', 'd'];
+
+        // Concatenar numeros y letras
+        document.write("Numeros y letras: " + array.concat(letras) + "<br/>");
+
+        // Concatenar letras y numeros
+        document.write("letras y numeros: " + letras.concat(array) + "<br/>")
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

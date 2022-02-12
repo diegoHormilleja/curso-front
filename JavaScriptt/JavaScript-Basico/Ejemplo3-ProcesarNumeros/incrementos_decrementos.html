@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var cuenta = 0;
+
+        function incrementar() {
+            // cuenta = cuenta + 1;
+            // Incremento
+            cuenta++;
+            document.getElementById("etiqueta").innerText  = "Contador: " + cuenta;
+        }
+
+        function decrementar() {
+            // cuenta = cuenta - 1;
+            // cuenta --;
+            document.getElementById("etiqueta").innerText  = "Contador: " + --cuenta;
+        }
+
+        function incrementar2() {
+            // Operador compuesto de asignacion
+            cuenta += 2;
+            document.getElementById("etiqueta").innerText  = "Contador: " + cuenta;
+        }
+
+        function decrementar2() {
+            // Operador compuesto de asignacion
+            cuenta -= 2;
+            document.getElementById("etiqueta").innerText  = "Contador: " + cuenta;
+        }
+
+        function pre_post() {
+            var a = 7;
+            var b = 0;
+
+            // post incremento
+            // primero asgina y luego incrementa
+            b = a++;
+            document.getElementById("resultado").innerText += b + "\n"; 
+
+            // pre incremento
+            // primero incrementa y luego asigna
+            var a = 7;
+            b = ++a;
+            document.getElementById("resultado").innerText += b; 
+        }
+
+
+    </script>
+</head>
+<body onload="pre_post()">
+    <label for="" id="etiqueta"> Contador: 0 </label>
+
+    <button onclick="incrementar()"> Incrementar </button>
+    <button onclick="decrementar()"> Decrementar </button>
+
+    <button onclick="incrementar2()"> Incrementar 2 </button>
+    <button onclick="decrementar2()"> Decrementar 2</button>
+
+    <div id="resultado">
+
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,41 @@
+* {
+    padding: 5px;
+}
+
+
+div {
+    width: 350px;
+    height: 100px;
+    background: lightgray;
+    position: relative;
+    margin: 20px;
+    border-width: 5px 5px 0px; /* top right bottom left */
+    border-style: solid;
+    border-color: #CAE646;
+    border-radius: 20px 20px 0px 0px;
+
+  }
+
+  
+
+/* .parent {
+    background: blue;
+    padding: 5px;
+    position: relative;
+    height: 200vh;
+}
+
+.child-one {
+    background: green;
+}
+
+.child-two {
+    background: orange;
+}
+
+.child-three {
+    background: pink;
+    position: sticky;
+    top: 0;
+    bottom: 10;
+} */

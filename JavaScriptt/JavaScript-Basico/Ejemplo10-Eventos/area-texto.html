@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function mensaje(){
+            var mensaje = "Hola " + nombre.value + " " + apellidos.value + " Bienvenido a mi pagina";
+            document.getElementById("area").innerText = mensaje;        }
+
+        function limpiar() {
+            document.getElementById("area").innerText = ""; 
+        }
+
+    </script>
+    <style>
+        #area{
+            background-color: goldenrod;
+        }
+        label{
+            display: inline-block;
+            width: 80px;
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <label for=""> Nombre: </label>
+        <input type="text" id="nombre" name="nombre" /> <br/>
+
+        <label for=""> Apellidos: </label>
+        <input type="text" id="apellidos" name="nombre" /> <br/>
+
+        <textarea id="area" name="" cols="30" rows="10"> </textarea>
+
+        <input type="submit" value="Enviar" onmouseover="mensaje()" onmouseout="limpiar()"/>
+
+
+    </form>
+
+</body>
+</html>

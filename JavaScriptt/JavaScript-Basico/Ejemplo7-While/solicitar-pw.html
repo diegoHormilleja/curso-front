@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   <script>
+
+        var number = parseInt(Math.random() * 100);
+        var intentos = 2;
+        var salida = false;
+
+        function guess() {
+
+            console.log(number);
+
+            do {
+                var choise = document.getElementById("choise").value;
+                if (choise > number) {
+                    intentos--;
+                    alert("te has pasado de largo, te quedan " + intentos);
+
+                    if (intentos == 0) {
+                        salida = true;
+                        alert("has perdido!")
+                    } else { e.preventDefault(); }
+
+                } else if (choise < number) {
+                    intentos--;
+                    alert("te has quedado corto, te quedan " + intentos);
+
+                    if (intentos == 0) {
+                        salida = true;
+                        alert("has perdido!")
+                    } else { e.preventDefault(); }
+
+                } else {
+                    salida = true;
+                    alert("number correcto");
+                }
+
+
+            } while (!salida);
+
+            location.reload();
+
+        }
+
+
+    </script>
+</head>
+
+<body>
+
+    <label for=""> Introduce numero: </label>
+    <input type="number" name="number" id="choise">
+    <input type="submit" value="play" onclick="guess()">
+
+
+</body>
+
+</html>

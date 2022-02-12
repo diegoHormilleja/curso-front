@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- action="url_destino" a donde vamos a enviar todos los datos del formulario -->
+    <form action="url_destino" method="GET">
+        <fieldset> 
+            <legend> Datos Personales </legend>
+
+            <label for=""> Nombre: </label>
+            <input type="text" name="nombre" size="50" placeholder="Escribe tu nombre..."/> <br/>
+
+            <label for=""> Password: </label>
+            <input type="password" name="pw" size="50" /> <br/>
+
+            <input type="hidden" name="id" value="3" />
+
+            <label for=""> Adjunto... </label>
+            <input type="file" name="fichero"/> <br/>
+
+            <label for="">Sexo: </label>
+            <input type="radio" name="sexo" value="h" checked="checked"/> <label for="">Hombre</label>
+            <input type="radio" name="sexo" value="m"/> <label for="">Mujer</label> <br/>
+
+            <label for=""> Hobbies </label>
+            <input type="checkbox" name="aficion" value="cine"> <label for=""> Cine </label>
+            <input type="checkbox" name="aficion" value="musica"> <label for=""> Musica </label>
+            <input type="checkbox" name="aficion" value="teatro"> <label for=""> Teatro </label>
+            <input type="checkbox" name="aficion" value="danza"> <label for=""> Danza </label> <br/>
+
+        </fieldset>
+
+        <fieldset>
+
+            <legend> Datos Academicos </legend>
+
+            <label for=""> Nivel de estudios: </label>
+            <select name="estudios">
+                <option value="nada"> Sin estudios </option>
+                <option value="eso" selected="selected"> ESO </option>
+                <option value="medio"> Grado Medio </option>
+                <option value="superior"> Grado Superior </option>
+                <option value="grado"> Grado Universitario </option>
+            </select> <br/>
+
+            <label for=""> Cursos: </label>
+            <select name="cursos" multiple="multiple">
+                <option value="ofi"> Ofimatica </option>
+                <option value="html"> HTML </option>
+                <option value="css"> CSS </option>
+                <option value="angular"> Angular </option>
+                <option value="react"> React </option>
+            </select> <br/>
+
+        </fieldset>
+
+        <label for=""> Danos tu valoración:  </label>
+        <textarea name="" id="" cols="30" rows="10">
+            Algo ...
+        </textarea> <br/>
+
+        <input type="submit" value="enviar" /> <br/>
+        <input type="reset">
+
+
+    </form>
+</body>
+</html>

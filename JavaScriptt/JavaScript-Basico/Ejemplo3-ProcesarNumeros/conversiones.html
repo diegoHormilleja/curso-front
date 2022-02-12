@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var dato = document.getElementById("numero").value;
+        alert(typeof(dato));
+    </script>
+</head>
+<body>
+    <input type="text" id="numero" name="numero" placeholder="Introduce numero"/>
+
+    <button onclick="mostrar()"> Mostrar datos </button>
+    <script>
+        function mostrar(){
+            var dato = document.getElementById("numero").value;
+            // alert(typeof(dato));
+
+            // Conversiones implicitas
+            console.log("Dato introducido " + dato);
+
+            // Numero + boolean -> numero
+            var numero = 7;
+            var soltero = true;  // 1 si es true, 0 si es false
+            console.log(numero + soltero);
+
+            // Conversiones explicitas
+            var entero = parseInt(dato);
+            //alert(typeof(entero));
+            console.log("Decimal: " + parseInt(dato, 10));
+            console.log("Hexadecimal: " + parseInt(dato, 16));
+            console.log("Octal: " + parseInt(dato, 8));
+            console.log("Binario: " + parseInt(dato, 2));
+
+            console.log("Decimal: " + parseFloat(dato, 10));
+            console.log("Hexadecimal: " + parseFloat(dato, 16));
+            console.log("Octal: " + parseFloat(dato, 8));
+            console.log("Binario: " + parseFloat(dato, 2));
+
+            console.log("Decimal: " + entero.toString(10));
+            console.log("Hexadecimal: " + entero.toString(16));
+            console.log("Octal: " + entero.toString(8));
+            console.log("Binario: " + entero.toString(2));
+        }
+
+    </script>
+</body>
+</html>

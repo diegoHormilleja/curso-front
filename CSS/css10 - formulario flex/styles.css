@@ -1,0 +1,95 @@
+* {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #000;
+}
+
+.flex-container{
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    background: #222;
+    margin: 50px 50px;
+    border: 8px solid #000;
+    outline: 4px solid #fff;
+}
+
+.form {
+    min-width: 400px;
+    flex: 1;
+    text-align: center;
+    background: #222;
+    padding: 30px;
+    margin-left: 10px;
+    order: 5;
+}
+
+.form__input{
+    width: 100%;
+    padding: 7px;
+    margin: 6px 0;
+    border: none;
+    border-bottom: 3px solid #1c7;
+    background: #000;
+    background: transparent;
+    color: #fff;
+}
+
+.form__input:focus {
+    background: linear-gradient(to bottom, transparent, rgb(112, 18, 18));
+    outline: none;
+    border-bottom: 3px solid #5f9;
+    color: #fff;
+
+}
+
+.form textarea {
+    min-height: 140px;
+    resize: none;
+}
+
+.form-img {
+    flex: 1;
+    padding: 10px;
+    min-width: 300px;
+    max-width: 400px;
+    order: 1;
+    margin: auto;
+}
+
+.form-img div {
+    padding: 10px;
+}
+
+.img-container{
+    margin: auto;
+}
+
+.img-container div {
+    padding: 40px;
+    border-radius: 50%;
+    background-color: #094;
+    text-align: center;
+}
+
+.form-img img {
+    width: 50%;
+    margin: auto;
+}
+
+.form input[type="submit"]{
+    background: #094;
+    border-bottom: none;
+    padding: 12px;
+}
+
+.form input[type="submit"]:hover {
+    background: #072;
+    border-bottom: none;
+    padding: 12px;
+}

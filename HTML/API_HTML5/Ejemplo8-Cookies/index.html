@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>cookies</title>
+</head>
+
+<body>
+    <button onclick="crear()"> Crear cookie </button>
+    <button onclick="recuperar()"> Recuperar cookie </button>
+    <button onclick="modificar()"> Modificar cookie </button>
+    <button onclick="eliminar()"> Eliminar cookie </button>
+
+    <script>
+        function crear() {
+            // Crear una fecha
+            var fecha = new Date(2020, 9, 29, 15, 03, 58);
+
+            // Pasar la fecha a texto porque en las cookies solo se puede almacenar texto
+            var fechaTexto = fecha.toUTCString();
+            console.log(fechaTexto);
+
+            // Crear la cookie
+            document.cookie = "mensaje=Hola;" + fechaTexto + ";path=/";
+        }
+
+        function recuperar(){
+            console.log(document.cookie);
+        }
+
+        function modificar(){
+            document.cookie = "mensaje=Adios;";
+        }
+
+        function eliminar(){
+            // Eliminar la cookie
+            var fecha = new Date();
+            var fechaTexto = fecha.toUTCString();
+            document.cookie = "mensaje=Hola;" + fechaTexto + ";path=/";
+        }
+    </script>
+</body>
+
+</html>

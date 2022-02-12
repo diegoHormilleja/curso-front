@@ -1,0 +1,37 @@
+* {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle, #fff, #ccc);
+}
+
+/* Lo ideal seria darle a la fila del header y al footer medidas fijas */
+.grid-container {
+    background: #444;
+    display: grid;
+    grid-template-rows:
+        [first-line] 
+        150px
+        [second-line] 
+        150px
+        [third-line] 
+        150px
+        [fourth-line];
+    grid-template-columns: 150px 150px 150px;
+    border: 5px solid #000;
+}
+
+.grid-item {
+    border: 1px solid #000;
+    background: lightgrey;
+}
+
+.grid-item:first-child{
+    background: red;
+    grid-row: first-line / third-line;
+    grid-column: 1 / 3;
+}

@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  p Formulario #{title}
+
+  form(method="post", action="personas")
+    input(type="text", name="nombre", placeholder="Introduce nombre")
+    input(type="text", name="apellido", placeholder="Introduce apellido")
+    input(type="text", name="edad", placeholder="Introduce edad")
+    input(type="submit", name="Dar de alta")
+

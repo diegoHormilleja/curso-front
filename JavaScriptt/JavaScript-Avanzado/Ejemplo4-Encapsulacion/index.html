@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/Fecha.js"></script>
+    <script src="js/FechaEncapsulada.js"></script>
+</head>
+<body>
+    <script>
+
+        // Crear instancias de Fecha
+        //var fecha = new Fecha(1,10,2020);
+ 
+        // Fecha erronea
+        var fecha = new Fecha(67,-4,739);
+        //console.log(fecha.mostrarFecha());
+
+        // Crear fecha encapsulada
+        /*var fechaBuena = new FechaEncapsulada();
+        fechaBuena.setDia(67);
+        fechaBuena.setMes(-4);
+        fechaBuena.setAnyo(739);
+        console.log(fechaBuena.mostrarFecha());*/
+
+        var fechaEncapsulada = new FechaEncapsulada(1,10,2020);
+        console.log(fechaEncapsulada.mostrarFecha());
+
+    </script>
+</body>
+</html>

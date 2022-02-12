@@ -1,0 +1,278 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+
+/* variables */
+
+:root {
+    --green: #3E9722;
+    --white: #ffffff;
+  }
+
+
+/* generales */
+
+.titulos {
+    margin-left: 10px;
+    width: 95%;
+    background: #3C74E6;
+    color: #fff;
+    padding: 10px;
+    font-weight: 90;
+    font-size: 14px;
+    
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+/* header */ 
+header {
+    width: 920px;
+    height: 120px;
+    margin: 0 auto;
+    padding: 20px 20px 0px;
+    background-image: linear-gradient(0deg, #fff, #CAE646 20%, var(--green));
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    position:relative;
+}
+
+.header__title {
+    padding-bottom: 10px;
+}
+
+.header__title h1 {
+    position: absolute;
+    bottom: 24px;
+    left: 21px;
+}
+
+.header__lista {
+    list-style-type: none;
+    position: absolute;
+    bottom: 14px;
+    left: 370px;
+
+}
+
+.header__lista  li {
+    display: inline-block;
+}
+
+.header__lista  a {
+    padding: 5px 20px;
+    background: #fff;
+    text-decoration: none;
+    background-image: linear-gradient(to right, #BCBBAC, rgba(255,0,0,0) 75%);
+    color: black;
+    font-weight: bold;
+}
+
+.header__lista a:hover {
+    background: #E58C24;
+}
+
+
+/* main */
+
+main {
+    width: 920px;
+    margin: 0 auto;
+    padding: 15px 0px 30px;
+    display: grid;
+    grid-template-columns: 220px 480px 180px;
+    justify-content: space-evenly;
+
+}
+
+/* border del main */
+.main__con__border {
+    position: absolute;
+    top: 120px;
+    right: 0;
+    left: 0;
+    bottom: 70%;
+    margin: auto;
+
+    border-width: 5px 5px 0px; /* top right bottom left */
+    border-style: solid;
+    border-color: var(--green);
+    border-radius: 20px 20px 0px 0px;
+
+
+}
+
+.main__sin__border{
+    position: relative;
+}
+
+/* aside izq */ 
+
+.aside__login__form {
+    margin: 15px 0px 20px 20px;
+}
+
+.aside__login__form input{
+    padding: 5px 2px;
+    margin-bottom: 10px;
+}
+
+.aside__login__form button {
+    padding: 5px 10px;
+    margin-bottom: 10px;
+    font-weight: 120;
+}
+
+.aside__login__form a {
+    color: var(--green);
+}
+
+.aside__login__trabajo div {
+    margin: 15px 20px;
+    font-size: 10.2px;
+    font-weight: bold;
+}
+
+.verde {
+    color: var(--green);
+}
+
+
+/* section */
+
+
+/* primer article */
+.article {
+    margin-bottom: 20px;
+}
+
+.article__title {
+    display: flex;
+    justify-content: space-between;
+}
+
+.article__title h4 {
+    font-weight: 80;
+}
+
+.article__title__date {
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+.article__container__img {
+    overflow: hidden;
+    margin-top: 10px;
+    text-align: justify;
+    margin: 20px 20px;
+
+}
+
+.article__container__img img {
+    float: left;
+    width: 100px;
+    margin-right: 18px;
+
+}
+
+.article__container__img a {
+    color: var(--green);
+}
+
+.article__hr {
+    margin-top: 40px;
+}
+
+.article__p {
+    margin: 0px 0px 30px 15px;
+    padding-top: 5px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.article__p a {
+    color: var(--green);
+}
+
+
+/* segundo article */
+.article__dos__p {
+    margin: 15px 50px 20px 40px;
+    text-align: justify;
+    font-style: italic;
+}
+
+.article__dos__p__margin {
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.lista {
+    padding-left: 40px;
+}
+
+
+/* aside */
+
+.aside__webs__title {
+    width: 90%;
+    margin-bottom: 20px;
+}
+
+.aside__webs__lista {
+    margin-left: 30px;
+    margin-bottom: 20px;
+    font-size: 14px;
+}
+
+.aside__webs__lista li > a {
+    color: var(--green);
+    font-weight: bold;
+}
+
+.aside__webs__image {
+    display: block;
+    margin-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+/* footer */
+
+footer {
+    width: 960px;
+    border-width: 5px 5px 0px; /* top right bottom left */
+    border-style: solid;
+    border-color: #CAE646;
+    border-radius: 20px 20px 0px 0px;
+
+    margin: 0 auto;
+    padding-top: 10px;
+    height: 100px;
+}
+
+footer p {
+    display: flex;
+    justify-content:center;
+    font-size: 13px;
+}
+
+footer p > a {
+    color: black;
+}

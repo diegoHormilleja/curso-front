@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // funcion comprobar si es primo
+        function primo(numero) {
+            for (var i = 2; i < numero; i++) {
+                if (numero % i === 0) {
+                    return false;
+                }
+            }
+            return numero !== 1;
+        }
+
+        // iterador
+        function miIterador(array) {
+            var index = -1;
+
+            return {
+                next: function () {
+                    index++;
+                    if (primo(array[index])) {
+
+                        return { value: array[index], done: true }
+
+                    } else {
+                        return { done: false };
+                    }
+
+                }
+            }
+        }
+
+        var numeros = [];
+
+        for(var i = 0; i <100; i++){
+            numeros[i] = i;
+        }
+
+        var it = miIterador(numeros);
+
+        for (var i = 0; i <= 100; i++) {
+            var aux = it.next();
+            if (aux.done) {
+                document.writeln(aux.value + "<br/>");
+            }
+        }
+
+        /*
+                do{
+                    let aux = it.next();
+                    document.write(aux.value + "<br/>");
+                } while(!aux.done);
+        */
+
+    </script>
+</body>
+
+</html>

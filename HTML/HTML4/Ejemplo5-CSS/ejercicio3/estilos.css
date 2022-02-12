@@ -1,0 +1,20 @@
+table, tr, td{
+    border: thin solid;
+    border-collapse: collapse;
+}
+
+td{
+    padding: 10px;
+    background: #efefef url(images/flecha_inactiva.JPG) no-repeat 1px;
+    background-size: contain;
+    margin: 0;
+}
+
+td:hover{
+    padding: 10px;
+    background: #ddd url(images/flecha_activa.JPG) no-repeat 1px;
+    background-size: contain;
+    margin: 0;
+}
+
+span{ padding-left: 25px; }

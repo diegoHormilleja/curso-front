@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        class Alumno{
+            id;
+            nombre;
+            apellido;
+            nota;
+
+            // constructores
+            constructor(id, nombre, apellido, nota){
+                this.id = id;
+                this.nombre = nombre;
+                this.apellido = apellido;
+                this.nota = nota;
+            }
+
+            // metodos
+            mostrarInformacion(){
+                console.log(`id: ${this.id} de nombre ${this.nombre}`);
+            }
+            
+        }
+        
+        var alumnos = [
+            [1, 'Juan', 'Sanchez', 8.3],
+            [2, 'Maria', 'Lopez', 5.3],
+            [3, 'Pedro', 'Alvarez', 7.5]];
+
+/*
+        for (let i in alumnos) {
+            let [id, nombre, apellido, nota] = alumnos[i];
+            console.log(`id: ${id} de nombre ${nombre}`);
+        }
+*/
+
+        for(let i in alumnos){
+            let [id, nombre, apellido, nota] = alumnos[i];
+            let alumno = new Alumno(id, nombre, apellido, nota);
+            var alumnos;
+            alumnos[i] = alumno;
+            alumno.mostrarInformacion();
+        }
+
+        console.log(JSON.stringify(alumnos));
+    </script>
+</body>
+
+</html>

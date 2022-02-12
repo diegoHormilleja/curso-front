@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function cargar() {
+            document.getElementById("navigator").innerHTML =
+                "navigator.appName is " + "<b>" + navigator.appName + "</b><br/>" +
+                "navigator.appCodeName is " + "<b>" + navigator.appCodeName + "</b><br/>" +
+                "navigator.platform is " + "<b>" + navigator.platform + "</b><br/>" +
+                "Cookies habilitadas: " + "<b>" + navigator.cookieEnabled + "</b>";
+
+            document.getElementById("demo").innerHTML = "Your screen resolution is: " + screen.width + "x" + screen.height;
+
+            // ver la URL
+            document.getElementById("url").innerHTML = "URL: " + location.pathname + "\n" +
+                "Port: " + location.port + "\n";
+
+            // reemplazar la url
+            // location.replace("http://www.marca.es");
+
+            // Recargar la pagina
+            // location.reload();
+
+            // Acceder al historial
+            document.getElementById("historial").innerHTML = "Historial: " + history.length + "\n";
+
+        }
+
+        function adelante() {
+            history.forward();
+        }
+    </script>
+</head>
+
+<body onload="cargar()">
+    <p id="navigator"></p>
+    <p id="demo"></p>
+    <p id="url"></p>
+    <p id="historial"></p>
+    <a href="otra.html">Navegar a otra página</a>
+    <button onclick="adelante()">Ir otra pagina</button>
+
+</body>
+
+</html>

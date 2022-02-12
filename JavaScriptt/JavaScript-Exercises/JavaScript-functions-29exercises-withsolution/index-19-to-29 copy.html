@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const runners = [
+            { name: "Courtney", gender: "F", age: 21, timeSeconds: 1505 },
+            { name: "Lelisa", gender: "M", age: 24, timeSeconds: 1370 },
+            { name: "Anthony", gender: "M", age: 32, timeSeconds: 1538 },
+            { name: "Halina", gender: "F", age: 33, timeSeconds: 1576 },
+            { name: "Nilani ", gender: "F", age: 27, timeSeconds: 1601 },
+            { name: "Laferne", gender: "F", age: 35, timeSeconds: 1572 },
+            { name: "Jerome", gender: "M", age: 22, timeSeconds: 1384 },
+            { name: "Yipeng", gender: "M", age: 29, timeSeconds: 1347 },
+            { name: "Jyothi", gender: "F", age: 39, timeSeconds: 1462 },
+            { name: "Chetan", gender: "M", age: 36, timeSeconds: 1597 },
+            { name: "Giuseppe", gender: "M", age: 38, timeSeconds: 1570 },
+            { name: "Oksana", gender: "F", age: 23, timeSeconds: 1617 }
+        ];
+
+        const minsSecs = timeSeconds =>
+            Math.floor(timeSeconds / 60) + ":" +
+            Math.round(timeSeconds % 60).toString().padStart(2, '0');
+
+        const printRunner = runner =>
+            [`Name: ${runner.name}`,
+            `gender: ${runner.gender}`,
+            `age: ${runner.age}`,
+            `time: ${minsSecs(runner.timeSeconds)}`
+            ].join('\t');
+
+        const printRunners = (runners, listType) =>
+            `List of ${listType} (total ${runners.length}):\n` +
+            runners.map(printRunner).join('\n');
+
+
+        // const getPaces = runners => runners.map(runner => runner.timeSeconds / 3.1);
+        // const paces = getPaces(runners);
+
+        // console.log(paces);
+
+        // const getAvgPace = paces => paces.reduce(
+        //     (total, currentPace) => total + currentPace, 0) / paces.length;
+        //     console.log(minsSecs(getAvgPace(paces)));
+
+        const addPacesToRunners = runners => runners.map(runner => ({ ...runner, pace: runner.timeSeconds / 3.1 }));
+        const pacesWithAllFields = addPacesToRunners(runners);
+
+        const groupSumPaceByGender = runners => runners.reduce((groups, runner) => {
+            const gender = runner.gender;
+            groups[gender] = groups[gender] || { pace: 0, count: 0 };
+            groups[gender].pace += runner.pace;
+            groups[gender].count += 1;
+            return groups;
+        }, {});
+
+        const sumPacesByGender = groupSumPaceByGender(pacesWithAllFields);
+
+
+        const calAvgPaceByGender = sumPacesByGender =>
+            Object.keys(sumPacesByGender).map(gender => {
+                const group = sumPacesByGender[gender];
+                return { gender: gender, avgPace: group.pace / group.count };
+            }
+            );
+
+        const avgPaceByGender = calAvgPaceByGender(sumPacesByGender);
+
+        console.log("Average pace by gender: ");
+        avgPaceByGender.forEach(entry => console.log(
+            `gender: ${entry.gender} average pace: ${minsSecs(entry.avgPace)}`
+        ));
+
+
+        // const result1 = addPacesToRunners(runners);
+        // const result2 = groupSumPaceByGender(result1);
+        // const avg = calAvgPaceByGender(result2);
+        const pipe = (...fns) => input => fns.reduce((prev, fn) => fn(prev), input);
+
+        const avgWithPipe = pipe(addPacesToRunners, groupSumPaceByGender, calAvgPaceByGender);
+
+        const resultPipe = avgWithPipe(runners);
+        resultPipe.forEach(entry => console.log(
+            `gender: ${entry.gender} average pace: ${minsSecs(entry.avgPace)}`));
+
+        let objArr = [10, 1, 2, 3];
+
+        // objArr.forEach(function (val, index) {
+        //     console.log(val);
+        //     objArr[index] = val + 10;
+        //     console.log(val);
+
+        // });
+
+        console.log(objArr);
+
+        let results = objArr.every(function (val) {
+            return val > 0;
+        })
+
+        console.log(objArr);
+        console.log(results);
+
+
+        var bar;
+        let nombre;
+        console.log(bar);
+        console.log(nombre);
+
+
+
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

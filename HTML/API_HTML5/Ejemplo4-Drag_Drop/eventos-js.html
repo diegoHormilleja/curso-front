@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>eventos-js</title>
+    <style>
+        #contenedor {
+            background-color: turquoise;
+            width: 300px;
+            height: 200px;
+            float: right;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- <div id="arrastra" draggable="true" ondragstart="start()" ondragend="end()">
+        Elemento arrastable
+    </div> -->
+ 
+    <div id="arrastra">
+        Elemento arrastable
+    </div>
+
+    <!-- <div id="contenedor" ondragover="over()" ondragleave="leave()" ondrop="drop()"> -->
+        <div id="contenedor"> </div>
+
+    </div>
+
+    <script>
+
+        document.getElementById("arrastra").ondragstart = start;
+        document.getElementById("arrastra").ondragend = end;
+        document.getElementById("arrastra").draggable = true;
+
+        document.getElementById("contenedor").ondragover = over;
+        document.getElementById("contenedor").ondragleave = leave;
+        document.getElementById("contenedor").ondrop = drop;
+
+
+        function over() {
+            event.target.style.border = "5px dotted #aaa";
+            // Cancelo el evento porque sino no detecta el evento drop
+            event.preventDefault();
+
+        }
+
+        function leave() {
+            event.target.style.border = 'none';
+        }
+
+        function start() {
+            event.target.style.opacity = '0.4';
+
+        }
+
+        function end() {
+            event.target.style.opacity = '1';
+
+        }
+
+        function drop(){
+            event.target.appendChild(document.getElementById("arrastra"));
+        }
+    </script>
+
+</body>
+
+</html>

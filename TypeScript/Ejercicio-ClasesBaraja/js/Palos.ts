@@ -1,0 +1,1 @@
+enum Palos {OROS, ESPADAS, BASTOS, COPAS};

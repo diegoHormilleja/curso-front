@@ -1,0 +1,4 @@
+{
+    "nombre" : "mariano",
+    "edad" : 24
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <button onclick="esperar()"> Pulsame </button>
+    <script>
+
+        async function esperar() {
+            setTimeout(alert("Hemos esperado 2 segundos"), 2000);
+        }
+
+        // Callback
+        // Funcion que se demora su ejecucion y se envia normalmente como parametro de otras funciones
+        // setTimeout(que, cuando);
+        setTimeout(function () {
+            alert("Hola")
+        }, 500);
+
+        // setTimeout(() => {alert("Adios")}, 1000);
+
+        var miCallback = () => { alert("Adios") };
+        setTimeout(miCallback, 1000);
+
+        // Promesas
+        // Es el resultado de una operacion asincrona
+        /* var url = "https://pokeapi.co/api/v2/pokemon/1";
+        var promise = fetch(url);
+        promise.then(resultado => console.log(resultado));
+        promise.catch(error => console.log(error)); */
+
+        fetch("https://pokeapi.co/api/v2/pokemon/pikachu")
+            .then(resultado => console.log(resultado.json()))
+            .catch(error => console.log(error));
+
+        // Lanzar la peticion de forma asincrona
+        var url = "https://pokeapi.co/api/v2/pokemon/pikachu";
+        async (url) => {
+            try {
+                var respuesta = await fetch(url);
+            } catch (error) {
+                console.log(error);
+            }
+        }
+
+
+
+    </script>
+</body>
+
+</html>

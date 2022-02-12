@@ -1,0 +1,59 @@
+* {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: radial-gradient(circle, #fff, #ccc);
+}
+
+/* Lo ideal seria darle a la fila del header y al footer medidas fijas */
+.grid-container {
+    background: #444;
+    margin: 10px;
+    display: grid;
+    grid-template-areas: 
+        "header header header"
+        "aside main main"
+        "aside main main"
+        "aside main main"
+        "aside main main"
+        "aside main main"
+        "aside main main"
+        "footer footer footer";
+    grid-template-rows: repeat(auto-fill, 1fr);
+    height: 92vh;
+    border: 5px solid #000;
+}
+
+ul li {
+    display: inline-block;
+}
+
+.grid-item {
+    padding: 20px;
+}
+
+.grid-header {
+    background-color: #f96;
+    grid-area: header;
+}
+
+.grid-aside {
+    background-color: #888;
+    grid-area: aside;
+}
+
+.grid-main {
+    background-color: #96f;
+    grid-area: main;
+
+}
+
+.grid-footer {
+    background-color: #6f9;
+    grid-area: footer;
+}
+

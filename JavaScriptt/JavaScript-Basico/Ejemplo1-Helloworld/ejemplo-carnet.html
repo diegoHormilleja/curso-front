@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #carnet{
+            display: block;
+        }
+
+        #tipo{
+            display: none;
+        }
+    </style>
+    <script>
+        function mostrarTipo(){
+            if (document.getElementById('conducir_si').checked == true){
+                document.getElementById('tipo').style.display = 'block';
+            } else {
+                document.getElementById('tipo').style.display = 'none';
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="carnet">
+        <label for="">Tienes carnet de conducir??</label>
+        <input type="radio" id="conducir_si" name="conducir" value="si" onchange="mostrarTipo()"/> si
+        <input type="radio" id="conducir_no" name="conducir" value="no" onchange="mostrarTipo()" /> no
+    </div>
+    
+    <div id="tipo">
+        <select name="" id="">
+            <option value=""> --Seleccione-- </option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+
+        </select>
+    </div>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for=""> Nombre pokemon </label>
+    <input type="text" id="nombre" name="nombre" onblur="buscar()"/>
+    
+    <div id="resultado"></div>
+
+    <script>
+        var xhr;
+
+        function buscar() {
+            // Obtener el objeto XmlHttpRequest del navegador
+            xhr = new XMLHttpRequest();
+
+            // Recuperar el nombre del pokemon escrito por el usuario
+            var dato = document.getElementById("nombre").value;
+
+            // Preparar la peticion
+            xhr.open("GET", "https://pokeapi.co/api/v2/pokemon/" + dato, true);
+
+            // En la cabecera indico que el formato de respuesta es JSON
+            xhr.setRequestHeader("accept", "application/json");
+
+            // Informar de la funcion que va a procesar la respuesta
+            xhr.onreadystatechange = procesar;    // sin parentesis
+
+            // Enviar la peticion
+            xhr.send();
+        }
+
+        function procesar(){
+            if (xhr.readyState == 4){
+                var datos = JSON.parse(xhr.responseText);
+                var habilidades = datos.abilities;
+                document.getElementById("resultado").innerText = "Habilidades: ";
+
+                for(var i in habilidades){
+                    document.getElementById("resultado").innerText += habilidades[i].ability.name + "\n";
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

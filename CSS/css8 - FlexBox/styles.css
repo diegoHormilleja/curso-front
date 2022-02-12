@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* flex */
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item {
+    background: #248;
+    color: #fff;
+    padding: 10px;
+    margin: 10px;
+}
+
+/* flex-grow */
+
+.flex-container-2 {
+    display: flex;
+    justify-content: space-between;
+
+}
+
+.flex-item-2 {
+    background: #248;
+    color: #fff;
+    margin: 5px;
+    height: 120px;
+    min-width: 120px;
+    text-align: center;
+}
+
+.orange{
+    background: orange;
+}
+
+.green {
+    background: green; 
+}

@@ -1,0 +1,50 @@
+on<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Set -> son colecciones dinamicas, son iterables
+        // No admiten elementos repetidos
+
+        // Crear un Set
+        var set = new Set();
+
+        // Agregar valores a un set
+        set.add("Juan");
+        set.add("Laura");
+        set.add("Ismael");
+        set.add("Sofia");
+        set.add("Pepe");
+        set.add("Antonio");
+        set.add(10);
+        set.add("10");
+
+        // Los elementos repetidos no se agregan
+        set.add("Sofia");
+
+        // Comprobar si existe un valor
+        console.log("Tenemos a Laura? " + set.has("Laura"));
+
+        // Borrar un elemento
+        set.delete("Laura");
+
+        // Var numero de elementos
+        console.log("Numero de elementos " + set.size);
+
+        // Recorrer el set
+        for (var item of set) {
+            console.log(item);
+        }
+
+        set.forEach((item) => {
+            console.log(item);
+        });
+
+
+    </script>
+</body>
+</html>

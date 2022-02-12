@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Códigos postales</title>
+    <style>
+        textarea,
+        input {
+            display: block;
+            margin: 10px;
+        }
+
+        textarea {
+            width: 200px;
+            height: 150px;
+            background-color: RGB(230, 230, 230);
+        }
+    </style>
+</head>
+
+<body onload="cargarDatos()">
+    <script>
+        
+        function cargarDatos() {
+            let ta = document.getElementById("codigos");
+            let datos = "";
+            datos += "50101\n";
+            datos += "601012\n";
+            datos += "7232\n";
+            datos += "73232\n";
+            datos += "95521\n";
+            datos += "959a3";
+            ta.value = datos;
+        }
+
+        function getDatos() {
+            let contenido, datos;
+            contenido = document.getElementById("codigos").value;
+            /* en la variable contenido esta almacenado todo el texto
+               del text area incluido el salto de línea \n */
+            datos = contenido.split("\n");
+            /* con el método split vamos a convertir el contenido en un array utilizando como separador el salto de línea \n */
+
+            return datos;
+        }
+
+        function validar() {
+            let contenido = document.getElementById("codigos");
+            let contenidoValido = document.getElementById("codigos_validos");
+
+            let codigosValidos = "", codigosInvalidos = "";
+            let postalCodes = getDatos();
+            let regExp = /\b\d{5}\b/;
+            // let regExp = /^(?:0[1-9]|[1-4]\d|5[0-2])\d{3}$/;
+
+            for (let i = 0; i < postalCodes.length; i++) {
+                if (regExp.test(postalCodes[i])) {
+                    codigosValidos += postalCodes[i] + "\n";
+                } else {
+                    codigosInvalidos += postalCodes[i] + "\n";
+                }
+                
+            }
+
+            contenido.value = "";
+            contenido.value = codigosInvalidos;
+            contenidoValido.value = codigosValidos;
+
+
+        }
+
+    </script>
+
+    <div>
+        <h3>Verifica números de 5 dígitos</h3>
+
+        <textarea id="codigos"></textarea>
+        <input type="button" value="validar" onclick="validar()">
+        <textarea name="" id="codigos_validos"></textarea>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio2</title>
+
+    <script type="text/javascript" src="lib/jquery.min.3.5.1.js"></script>
+    <script type="text/javascript" src="lib/xml2json.js"></script>
+    <script type="text/javascript" src="lib/handlebars-v4.0.5.js"></script>
+    <script type="text/javascript" src="lib/jquery.dataTables.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="styles/jquery.dataTables.min.css" />
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+</head>
+
+
+<body>
+    <div id="enunciado"></div>
+    <div id="ejercicioA"></div>
+    <script src="js/index.js"></script>
+
+
+    <!-- handleBars -->
+    <div id="ejercicioB"></div>
+    <table id="stemplate">
+        <thead>
+            <tr>
+                <th>Matricula</th>
+                <th>Marca</th>
+                <th>Modelo</th>
+                <th>Color</th>
+                <th>Precio</th>
+                <th>Extras</th>
+                <th>CodigoCliente</th>
+
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+
+
+    <script id="table-template" type="text/x-handlebars-template">
+        {{#each this}}
+        <tr>
+            <td>{{matricula}} </td>
+            <td>{{marca}}</td>
+            <td>{{modelo}}</td>
+            <td>{{color}}</td>
+            <td>{{precio}}$</td>
+            <td>{{extras}}</td>
+            <td>{{codigoCliente}}</td>
+
+
+        </tr>
+        {{/each}}
+    </script>
+
+
+
+
+
+
+
+</body>
+
+</html>

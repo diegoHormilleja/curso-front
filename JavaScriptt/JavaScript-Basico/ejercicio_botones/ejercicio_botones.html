@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ejercicio_botones</title>
+</head>
+
+<body>
+  <p>Rango de edades</p>
+
+  <form action="" id="form" onchange="cambiaEdad()">
+
+    <input type="radio" name="edad" value="peque" /> Peque (0-11)
+    <input type="radio" name="edad" value="adolescente" /> Adolescente (12-17)
+    <input type="radio" name="edad" value="adulto" /> Adulto (18-64)
+    <input type="radio" name="edad" value="jubilado" /> Jubilado (65-99)
+
+    <br>
+    <input type="button" onclick="myFunction()" value="Send order">
+    <br><br>
+    <input type="text" id="order" size="50">
+    <input type="submit" value="Submit">
+  </form>
+
+  <script>
+    function myFunction() {
+      var edad = document.forms[0];
+      var txt = "";
+      var i;
+      for (i = 0; i < edad.length; i++) {
+        if (edad[i].checked) {
+          txt = edad[i].value;
+        }
+      }
+
+      switch (txt) {
+        case "peque":
+          document.getElementById("order").value = "eres muy peque";
+          break;
+
+        case "adolescente":
+          document.getElementById("order").value = "eres un adolescente";
+          break;
+
+        case "adulto":
+          document.getElementById("order").value = "eres un adulto";
+          break;
+
+        case "jubilado":
+          document.getElementById("order").value = "eres un jubilado";
+          break;
+
+      }
+    }
+
+    function cambiaEdad(){
+      alert(document.getElementByName("edad").value);
+    }
+  </script>
+</body>
+
+</html>

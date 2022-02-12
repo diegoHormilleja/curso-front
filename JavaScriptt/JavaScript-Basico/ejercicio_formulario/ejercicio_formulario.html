@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ejercicio_formulario</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <script>
+        function comprobar(event) {
+
+            var nombre = document.getElementById("user").value.length;
+            var apellidos = document.getElementById("surname").value.length;
+            var etiqueta = document.getElementById("mensaje");
+            var error = false;
+
+            if (nombre == 0) {
+                etiqueta.innerText = "Debes introducir tu nombre";
+                error = true;
+
+            } else if(apellidos == 0) {
+                etiqueta.innerText = "Por favor, introduzca apellidos";
+                error = true;
+            } else {
+                alert("Bienvenido: '" + document.getElementById("user").value + " " + document.getElementById("user").value + "'");
+            }
+
+            if (error) {
+                // Cancelar el evento submit
+                event.preventDefault();
+            }
+        }
+        
+    </script>
+
+</head>
+<body>
+
+    <div id="container">
+
+        <form action="" onsubmit="comprobar(event)">
+            <div>
+                <h3>ejercicio_formulario</h3>
+                <label for=""> Nombre : </label>
+                <input type="text" id="user" name="name" />
+            </div>
+            
+            <div>
+                <label for=""> Apellidos : </label>
+                <input type="text" id="surname" name="surname" />
+            </div>
+        
+            <div>
+                <input type="submit" value="Enviar" /> 
+            </div>
+        </form>
+        
+        <label for="" id="mensaje"></label>
+        <br/>
+
+    </div>
+
+
+</body>
+</html>

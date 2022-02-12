@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //19. Write a JavaScript function that returns array elements larger than a number
+
+        const elementsLarger = (words, x) => words.filter(word => word.length > x);
+
+        const arr = ['spray', 'limit', 'elite', 'exuberant', 'destruction', 'present'];
+        let x = 5;
+
+        console.log(elementsLarger(arr, x));
+
+        // version pro
+
+        function BiggerElements(val) {
+            return function (evalue, index, array) {
+                return (evalue >= val);
+            };
+        }
+
+        var result = [11, 45, 4, 31, 64, 10].filter(BiggerElements(10));
+        console.log(result);
+
+
+        // 20. Write a JavaScript function that generates a string id (specified length) of random characters.
+
+        const generateId = specifiedL => {
+            var str = '';
+            var characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+
+            for (var i = 0; i < specifiedL; i++) {
+                str += characters.charAt(Math.floor(Math.random() *
+                    characters.length));
+            }
+
+            return str;
+        }
+
+        var myStrResult = generateId(10);
+        console.log(myStrResult);
+
+
+        // 21. Write a JavaScript function to get all possible subset with a fixed length (for example 2) combinations in an array.
+
+        function subset(arra, arra_size) {
+            var result_set = [],
+                result;
+
+
+            for (var x = 0; x < Math.pow(2, arra.length); x++) {
+                result = [];
+                i = arra.length - 1;
+                do {
+                    if ((x & (1 << i)) !== 0) {
+                        result.push(arra[i]);
+                    }
+                } while (i--);
+
+                if (result.length >= arra_size) {
+                    result_set.push(result);
+                }
+            }
+
+            return result_set;
+        }
+
+        console.log(subset([1, 2, 3, 4, 3434, 34, 33, 4], 5));
+
+
+        function subset_2(array, fixed) {
+
+        }
+
+
+        // 22. Write a JavaScript function that accepts two arguments, a string and a letter and the function will count the number of occurrences of the specified letter within the string.
+        // Sample arguments : 'w3resource.com', 'o'
+
+        function char_count(str, letter) {
+            var letter_Count = 0;
+            for (var position = 0; position < str.length; position++) {
+                if (str.charAt(position) == letter) {
+                    letter_Count += 1;
+                }
+            }
+            return letter_Count;
+        }
+
+        console.log(char_count('w3resource.com', 'o'));
+
+
+        // 23. Write a JavaScript function to find the first not repeated character. Go to the editor
+        // Sample arguments : 'abacddbec'
+        // Expected output : 'e'
+        console.time('loop1');
+        function not_repeat(str) {
+            arr2 = str.split('');
+            for (let i = 0; i < arr2.length; i++) {
+
+                if (arr2.indexOf(arr2[i], i + 1) == -1) {
+
+                    return arr2[i];
+                } else {
+                    aux = arr2[i];
+                    console.log('aux es --> ' + aux);
+                    arr2.shift();
+                    arr2.push(aux);
+                    console.log(arr2);
+                    i = -1;
+                }
+            }
+        }
+        console.log('El primero que no se repite es --> ' + not_repeat('abacddbec'));
+        console.timeEnd('loop1');
+
+
+        console.time('loop2');
+        function find_FirstNotRepeatedChar(str) {
+            var arra1 = str.split('');
+            var result = '';
+            var ctr = 0;
+
+            for (var x = 0; x < arra1.length; x++) {
+                ctr = 0;
+
+                for (var y = 0; y < arra1.length; y++) {
+                    if (arra1[x] === arra1[y]) {
+                        ctr += 1;
+                    }
+                }
+
+                if (ctr < 2) {
+                    result = arra1[x];
+                    break;
+                }
+            }
+            return result;
+        }
+        console.log('El primero que no se repite es --> ' + find_FirstNotRepeatedChar('abacddbec'));
+        console.timeEnd('loop2');
+
+        // 24. Write a JavaScript function to apply Bubble Sort algorithm. Go to the editor
+        // Note : According to wikipedia "Bubble sort, sometimes referred to as sinking sort, is a simple sorting algorithm that works by repeatedly stepping through the list to be sorted, comparing each pair of adjacent items and swapping them if they are in the wrong order".
+        // Sample array : [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213]
+        // Expected output : [3223, 546, 455, 345, 234, 213, 122, 98, 84, 64, 23, 12, 9, 4, 1]
+
+
+        console.time('loop3');
+        const array = [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213];
+        array.sort(function (a, b) {
+            return a - b;
+        });
+
+        console.log(array);
+        console.timeEnd('loop3');
+
+        const array2 = [12, 345, 4, 546, 122, 84, 98, 64, 9, 1, 3223, 455, 23, 234, 213, 33];
+
+
+
+        console.time('loop4');
+        const bubleSorting = arr => {
+
+            arrSize = arr.length;
+            // es par
+            if (arrSize % 2 == 0) {
+
+                do {
+                    var flag = false;
+                    for (let i = 0; i < arr.length; i++) {
+                        if (arr[i + 1] != undefined) {
+                            if (arr[i] < arr[i + 1]) {
+                                var b = arr[i];
+                                arr[i] = arr[i + 1];
+                                arr[i + 1] = b;
+                                flag = true;
+                            }
+                        }
+
+                    }
+                    console.log(flag);
+                } while (flag != false);
+
+
+
+            } // es impar
+            else {
+                for (let i = 0; i < array2.length; i += 2) {
+                    console.log(i);
+                    // if (i == (arrSize - 1)) break;
+                    // if (arr[i] < arr[i + 1]) {
+                    //     var b = arr[i];
+                    //     arr[i] = arr[i + 1];
+                    //     arr[i + 1] = b;
+                    // }
+
+                }
+            }
+
+            return arr;
+        }
+
+        console.log(bubleSorting(array2));
+        console.timeEnd('loop4');
+
+
+        // 25. Write a JavaScript function that accept a list of country names as input and returns the longest country name as output. Go to the editor
+        // Sample function : Longest_Country_Name(["Australia", "Germany", "United States of America"])
+        // Expected output : "United States of America"
+
+        console.time('loop5');
+        const compareCountries = (arr_countries) => {
+            arr_countries.sort((a, b) => {
+                return a.length - b.length;
+            });
+            return arr_countries[arr_countries.length-1];
+        }
+
+        let arrCountries = ["Australia", "Germany", "United States of America", "Spain"];
+        console.log(compareCountries(arrCountries));
+        console.timeEnd('loop5');
+
+
+        console.time('loop6');
+        let arrayoso = ["Australia", "Germany", "United States of America", "Spain"];
+
+        const constelacion = arr_paises => {
+            return arr_paises.reduce((previous, current) => {
+                return previous.length > current.length ? previous : current;
+            }) 
+        }
+
+        console.log(constelacion(arrayoso));
+        console.timeEnd('loop6');
+
+
+        {
+            console.log(typeof name);
+            console.log(arrayoso[200]);
+
+            var name = "gaurav";
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

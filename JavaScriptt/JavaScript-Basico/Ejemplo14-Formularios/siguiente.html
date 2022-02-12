@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+
+        function evtSubmit(e) {
+            console.log("envio");
+            e.preventDefault();
+
+        };
+
+        var myform = document.myForm;
+        myform.setAttribute('action', 'javascript:evtSubmit();');
+
+    </script>
+</head>
+
+<body>
+    <form name="myForm">
+        <input type="text" name="search" />
+        <span id="search-button"></span>
+    </form>
+</body>
+
+</html>

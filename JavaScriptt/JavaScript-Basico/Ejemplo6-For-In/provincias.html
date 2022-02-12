@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        var nombresProvincias = ["Zaragoza", "Huesca", "Madrid"];
+
+        function cargarProvincias(){
+            for(var indice in nombresProvincias){
+                var opcion = new Option(nombresProvincias[indice], indice);
+                document.getElementById("provincias").appendChild(opcion);
+            }
+        }
+
+
+        function cargarPoblaciones(){
+            // limpiar el select de poblaciones eliminando las poblaciones anteriores
+            document.getElementById("poblaciones").innerHTML = "";
+
+            switch(document.getElementById("provincias").value){
+                case "0":
+                var nombresPoblaciones = ["Tarazona", "Calatayud", "Mallen"];
+                    break;
+                
+                case "1":
+                var nombresPoblaciones = ["Jaca", "Fraga", "Biescas"];
+                    break;
+
+                case "2":
+                var nombresPoblaciones = ["Fuenlabrada", "Humanes", "Getafe"];
+                    break;
+            }
+
+            for(var indice in nombresPoblaciones) {
+                var opcion = new Option(nombresPoblaciones[indice], indice);
+                document.getElementById("poblaciones").appendChild(opcion);
+            }
+
+        }
+
+    </script>
+</head>
+<body onload="cargarProvincias()">
+    <label for=""> Provincias: </label>
+    <select id="provincias" name="provincia" onchange="cargarPoblaciones()">
+        <option value="indice"> -- Selecciona -- </option>
+    </select> <br/>
+
+    <label for=""> Poblaciones </label>
+    <select id="poblaciones" name="poblacion" >
+        <option value="indice"> -- Selecciona -- </option>
+    </select>
+</body>
+</html>

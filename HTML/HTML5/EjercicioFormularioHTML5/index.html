@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio Formulario HTML5</title>
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+
+<body>
+
+    <form method="GET" action="">
+
+            <!-- First container -->
+        <div id="first-container">
+
+                <!-- Nombre -->
+            <div>
+                <label for=""> Nombre: </label>
+            </div>
+            <div>
+                <input type="text" name="nombre" minlength="3" maxlength="20" required="required" value="Jonathan" />
+            </div>
+
+                <!-- Apellido -->
+            <div>
+                <label for=""> Apellido: </label>
+            </div>
+            <div>
+                <input type="text" name="apellido" list="apellidosList" value="Doe"/>
+
+
+                <datalist id="apellidosList">
+                    <option value="Lopez" label="Lopez"></option>
+                    <option value="Lara">Lara</option>
+                    <option value="Laiz">Laiz</option>
+                    <option value="Sanz">Sanz</option>
+                    <option value="Sanchez">Sanchez</option>
+                    <option value="Sevilla">Sevilla</option>
+                </datalist>
+            </div>
+
+                <!-- Email -->
+            <div>
+                <label for=""> Email: </label>
+            </div>
+            <div>
+                <input type="email" name="email" value="jon@doe.com"/>
+            </div>
+
+                <!-- Country -->
+            <div>
+                <label for=""> Country: </label>
+            </div>
+            <div>
+                <select name="estudios">
+                    <option value="nada"> Sin estudios </option>
+                    <option value="eso" selected="selected"> Choose a talent </option>
+                    <option value="medio"> Grado Medio </option>
+                    <option value="superior"> Grado Superior </option>
+                    <option value="grado"> Grado Universitario </option>
+                </select>
+            </div>
+
+                <!-- Biografia -->
+            <div>
+                <label for=""> BIOGRAPHY: </label>
+            </div>
+            <div>
+                <textarea name="biography" id="biography" cols="30" rows="10"></textarea>
+            </div>
+
+        </div>
+
+            <!-- Segundo container-->
+        <div id="second-container">
+
+                <!-- Phone-->
+            <div>
+                <label for=""> Telefono </label>
+            </div>
+
+            <div>
+                <input type="tel" name="telefono" size="9" pattern="[6-7]{1}[0-9]{8}"
+                title="Debe tener 9 digitos y comenzar por 6 o 7" value="+351 999 999"/>
+            </div>
+
+
+                <!-- Afiliations -->
+            <div>
+                <label for=""> AFILIATIONS: </label>
+            </div>
+            <div>
+                <textarea name="afiliations" id="afiliations" cols="30" rows="10"></textarea>
+            </div>
+
+                <!-- Ocupacion -->
+            <div>
+                <label for=""> Ocupacion: </label>
+            </div>
+            <div>
+                <select name="estudios">
+                    <option value="nada"> Sin estudios </option>
+                    <option value="eso" selected="selected"> Choose a talent </option>
+                    <option value="medio"> Grado Medio </option>
+                    <option value="superior"> Grado Superior </option>
+                    <option value="grado"> Grado Universitario </option>
+                </select>
+            </div>
+
+                <!-- Cat's name-->
+            <div>
+                <label for=""> Cat's name: </label>
+            </div>
+            <div>
+                <input type="text" name="cat-name" minlength="3" maxlength="20" required="required" value="Kitty" />
+            </div>
+        </div>
+
+            <!-- Third container-->        
+        <div id="third-container">
+
+                            <!-- TYPE OF TALENT -->
+            <div>
+                <label for=""> TYPE OF TALENT </label>
+            </div>
+            <div>
+                <select name="estudios">
+                    <option value="nada"> Sin estudios </option>
+                    <option value="eso" selected="selected"> Choose a talent </option>
+                    <option value="medio"> Grado Medio </option>
+                    <option value="superior"> Grado Superior </option>
+                    <option value="grado"> Grado Universitario </option>
+                </select>
+            </div>
+
+                    <!-- Favourite drink-->   
+            <div>
+                <label for=""> Favourite drink : </label>
+            </div>
+            <div>
+                <div>
+                    <input type="text" name="nombre" minlength="3" maxlength="20" required="required" value="Green Tea" />
+                </div>
+            </div>
+
+                        <!-- Special Power -->   
+            <div>
+                <label for=""> Special Power </label>
+            </div>
+            <div>
+                <div>
+                    <input type="text" name="nombre" minlength="3" maxlength="20" required="required" value="Anti-gravity"/>
+                </div>
+            </div>
+
+                        <!-- Weapon of choice -->   
+            <div>
+                <label for=""> Weapon of choice </label>
+            </div>
+            <div>
+                <div>
+                    <input type="text" name="nombre" minlength="3" maxlength="20" required="required" value="Lightsaber"/>
+                </div>
+            </div>
+
+                <!-- COMMENTS -->
+            <div>
+                <label for=""> COMMENTS: </label>
+            </div>
+            <div>
+                <textarea name="comments" id="comments" cols="30" rows="10"></textarea>
+            </div>
+
+        </div>
+
+
+
+    </form>
+</body>
+
+</html>

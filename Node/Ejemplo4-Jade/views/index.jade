@@ -1,0 +1,15 @@
+extends layout
+
+block content
+
+  h1(class='jumbotron')= title
+
+  p Welcome to #{title}
+
+  - var nombres = ['Juan', 'Pedro', 'Maria', 'Luis', 'Laura', 'Jorge']
+
+  ul(class='list-group')
+
+  - each nombre in nombres 
+    li(class='list-group-item')= nombre
+

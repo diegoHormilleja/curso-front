@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let fibonacci = {
+            [Symbol.iterator](){
+                let primero = 0;
+                let segundo = 1;
+                contador = 0;
+                return{
+                    next(){
+                    while(true){
+                        var aux = primero + segundo;
+                        primero = segundo;
+                        segundo = aux;
+                        contador++;
+                        if(contador>20){
+                            return {done: true};
+                        }else{
+                            return {value: aux, done: false};    
+                        }
+                    }
+
+                    }
+                }
+            }
+        };
+
+        for(let termino of fibonacci){
+            document.write(termino + "<br/>");
+        }
+        
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // YIELD DE PRIMOS
+
+        var c = 100;
+        var j = 2;
+        var esPrimo = 0;
+
+        // Definir el generador
+        function* miGenerador() {
+            var num = 0;
+            // yield es pausar la funcion generadora
+            while (true) {
+                if (primo(j)) {
+                    yield esPrimo = j;
+                }
+                j++;
+            }
+        }
+
+        // Crear el generador
+        var generador = miGenerador();
+
+        // funcion comprobar si es primo
+        function primo(numero) {
+            for (var i = 2; i < numero; i++) {
+                if (numero % i === 0) {
+                    return false;
+                }
+            }
+            return numero !== 1;
+        }
+
+        // Usar el generador
+        for (i = 0; i < 10; i++) {
+            document.writeln(generador.next().value + "<br/>");
+        }
+
+        document.writeln("<br/>");
+        document.writeln("Fibonacci <br/>");
+
+
+
+        // YIELD DE FIBONACCI
+        var esFibonacci = 0;
+        c = 100;
+        j = 0;
+
+
+        // Definir el generador
+        function* miGenerador2() {
+
+            // yield es pausar la funcion generadora
+            for (; j < c; j++) {
+                    yield esFibonacci = fibonacci(j);
+            }
+        }
+
+        // Crear el generador
+        var generador2 = miGenerador2();
+
+        // Funcion comprobar si es fibonacci
+        function fibonacci(num) {
+            var a = 1, b = 0, temp;
+
+            while (num >= 0) {
+                temp = a;
+                a = a + b;
+                b = temp;
+                num--;
+            }
+
+            return b;
+        }
+
+
+        // Usar el generador
+        for (i = 0; i < 10; i++) {
+            document.writeln(generador2.next().value + "<br/>");
+        }
+
+    </script>
+</body>
+
+</html>

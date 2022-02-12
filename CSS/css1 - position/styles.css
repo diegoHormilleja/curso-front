@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+hr {
+    margin: 10px;
+}
+
+/* INLINE-BLOCK */
+
+#divPadre {
+    height:100px;
+    width:800px;
+     text-align:center;
+    background-color:blue;
+    display: inline-block;
+    
+}
+#divHijo {
+    height:20px;
+    width:400px;
+     margin:0px auto;
+    background-color:red;
+
+}
+
+#caja2{
+    background-color: yellow;
+    width: 400px;
+    height: 100px;   
+    position: absolute;
+    display: inline-block;
+
+}
+
+
+h2 {
+    background-color: red;
+    padding: 10px 50px;
+    display: inline-block;
+    height: 200px;
+    width: 50px;
+
+}
+
+/* POSITION */
+
+.container{
+    background: green;
+    width: 400px;
+    height: 200px;
+    margin: 20px;
+    position: relative;
+    border: 4px solid red;
+}
+
+.caja {
+    background: yellow;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+}
+
+.caja1{
+    
+}
+
+.caja2{
+    right: 0;
+
+}
+
+.caja3{
+    bottom: 0;
+    right: 0;
+}
+
+.caja4{
+    bottom: 0;
+}
+
+.caja5{
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    margin: auto;
+}

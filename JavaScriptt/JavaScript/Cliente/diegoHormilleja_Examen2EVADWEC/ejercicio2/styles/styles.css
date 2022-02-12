@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400);
+*,
+*::before,
+*::after{
+    /* margin: 0;
+    padding: 0; */
+    box-sizing: inherit;
+}
+
+html {
+    font-family: 'Sen', sans-serif;
+    font-weight: 100;
+    box-sizing: border-box;
+}
+
+
+.grande {
+  font-size: 1.4em;
+}
+
+
+#stemplate {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+  }
+  
+#stemplate td, #stemplate th {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: center;
+  }
+  
+#stemplate tr:nth-child(even){background-color: #f2f2f2;}
+  
+#stemplate tr:hover {background-color: #ddd;}
+  
+#stemplate th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    /* text-align: left; */
+    background-color: #4CAF50;
+    color: white;
+  }
+
+
+
+  /* DataTable */
+
+  div.dataTables_wrapper {
+    margin-bottom: 3em;
+  } 
+
+  #example td, #example th {
+    text-align: center;
+  }

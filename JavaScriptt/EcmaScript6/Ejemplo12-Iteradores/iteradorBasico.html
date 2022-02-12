@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        function miIterador(array){
+            var index = 0;
+
+            return{
+                next: function(){
+                    if (index < array.length){
+                        return {value: array[index++], done: false}
+                        
+                    } else{
+                        return{ done: true};
+                    }
+                }
+            }
+        }
+
+        var nombres = ['Juan', 'Luis', 'Antonio', 'Paco', 'Marta'];
+
+        var it = miIterador(nombres);
+        
+        for(var i=1; i<=10; i++){
+            var aux = it.next();
+            if (!aux.done){
+                document.writeln(aux.value + "<br/>");
+            }
+        }
+        
+/*
+        do{
+            let aux = it.next();
+            document.write(aux.value + "<br/>");
+        } while(!aux.done);
+*/
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WebWorker</title>
+</head>
+
+<body>
+    <p>Hilos dicen: <output id="resultado"></output> </p>
+
+    <button onclick="arrancarWorker(true)"> Enviar Hola </button>
+    <button onclick="arrancarWorker(false)"> Enviar adios </button>
+
+    <script>
+        var worker;
+        var trabajador;
+
+        function arrancarWorker(flag) {
+
+            if (typeof (worker) == "undefined") {
+                // Crear el worker
+                if (flag) {
+                    worker = new Worker("js/tarea.js");
+                } else {
+                    trabajador = new Worker("js/task.js");
+                }
+            }
+
+            // Envio el valor del contador actual a la tarea
+            if (localStorage.word != "undefined") {
+                if (flag) {
+                    var palabra = "hola";
+                    console.log("envio la palabra --> " + palabra);
+                    console.log("entro al localstorage");
+                } else {
+                    var palabra = "adios";
+                    console.log("entro al localstorage");
+                    console.log("envio la palabra --> " + palabra);
+
+                }
+            }
+
+            // Escuchar los mensajes recibidos de tarea y procesarlos
+            worker.onmessage = function (e) {
+
+                if (e.data == "HILO 1 DICE adios") {
+                    document.getElementById("resultado").innerHTML = e.data;
+                    worker.terminate;
+                    console.log("entro al e.data");
+                } else if (e.data == "HILO 2 DICE hola") {
+                    document.getElementById("resultado").innerHTML = e.data;
+                    trabajador.terminate;
+                    console.log("entro al e.data");
+                }
+            }
+        }
+
+        function pararWorker() {
+            // Finalizar la tarea
+            worker.terminate();
+            trabajador.terminate();
+        }
+
+    </script>
+</body>
+
+</html>
