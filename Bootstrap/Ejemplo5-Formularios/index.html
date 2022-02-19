@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrapImagenes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form action="url_destino" method="GET">
+            <fieldset>
+                <legend> Datos Personales </legend>
+
+                <div class="form-group">
+                    <label for="nombreControl"> Nombre: </label>
+                    <input type="text" class="form-control-sm" id="nombreControl" name="nombre" size="50" placeholder="Escribe tu nombre..." aria-describedby="nombreHelp"/>
+                    <small id="nombreHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+
+                </div>
+
+                <div class="form-group">
+                    <label for=""> Password: </label>
+                    <input type="password" class="form-control" name="pw" size="50" />
+                </div>
+
+                <input type="hidden" name="id" value="3" />
+
+                <div class="form-group">
+                    <label for="exampleFormControlFile1">Example file input</label>
+                    <input type="file" class="form-control-file" id="exampleFormControlFile1">
+                  </div>
+
+                <div class="form-group">
+                    <label for="">Sexo: </label>
+                    <input type="radio" name="sexo" value="h" checked="checked" /> <label for="">Hombre</label>
+                    <input type="radio" name="sexo" value="m" /> <label for="">Mujer</label>
+                </div>
+
+                
+                <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                    <label class="form-check-label" for="exampleRadios1">
+                      Default radio
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                    <label class="form-check-label" for="exampleRadios2">
+                      Second default radio
+                    </label>
+                  </div>
+                  <div class="form-check disabled">
+                    <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3" disabled>
+                    <label class="form-check-label" for="exampleRadios3">
+                      Disabled radio
+                    </label>
+                  </div>
+                  
+
+            </fieldset>
+
+            <fieldset>
+
+                <legend> Datos Academicos </legend>
+
+                <label for=""> Nivel de estudios: </label>
+                <select name="estudios">
+                    <option value="nada"> Sin estudios </option>
+                    <option value="eso" selected="selected"> ESO </option>
+                    <option value="medio"> Grado Medio </option>
+                    <option value="superior"> Grado Superior </option>
+                    <option value="grado"> Grado Universitario </option>
+                </select> <br />
+
+                <label for=""> Cursos: </label>
+                <select name="cursos" multiple="multiple">
+                    <option value="ofi"> Ofimatica </option>
+                    <option value="html"> HTML </option>
+                    <option value="css"> CSS </option>
+                    <option value="angular"> Angular </option>
+                    <option value="react"> React </option>
+                </select> <br />
+
+            </fieldset>
+
+            <label for=""> Danos tu valoración: </label>
+            <textarea name="" id="" cols="30" rows="10">
+                Algo ...
+            </textarea> <br />
+
+            <input type="submit" value="enviar" /> <br />
+            <input type="reset">
+
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!-- header -->
+<app-header> </app-header>
+
+<div class="container">
+
+    <!-- Botones de seleccion -->
+
+    <div class="row mt-2 mt-3 mb-4">
+        <div class="col-3">
+            
+            <select class="browser-default custom-select" placeholder="Choose your option" label="Example label">
+                <!-- <option>Clasificar</option> -->
+                <option value="1">Nuestros favoritos</option>
+                <option value="2">Novedades</option>
+                <option value="3">Precio de mayor a menor</option>
+            </select>
+        </div>
+
+        <div class="col-3">
+            <select class="browser-default custom-select">
+                <option selected>Tipo de producto</option>
+                <option value="1">Abrigos</option>
+                <option value="2">Capas</option>
+                <option value="3">Chalecos</option>
+            </select>
+        </div>
+
+        <div class="col-3">
+            <select class="browser-default custom-select">
+                <option selected>Estilo</option>
+                <option value="1">Abrigo</option>
+                <option value="2">Abrigos estilo bomber</option>
+                <option value="3">Acolchado</option>
+            </select>
+        </div>
+
+        <div class="col-3">
+            <select class="browser-default custom-select">
+                <option selected>Talla</option>
+                <option value="1">S</option>
+                <option value="2">M</option>
+                <option value="3">L</option>
+            </select>
+        </div>
+
+    </div>
+    <!-- Botones de seleccion -->
+
+    <div class="container mb-5">
+        <div class="row">
+            <!-- Card -->
+            <div *ngFor="let item of items; index as i"  class="col-md-3 col-sm-4" routerLink="../detalle/{{item.id}}">
+
+           
+                    <!-- Card img -->
+                    <mdb-card-img src="{{ item.image }}" alt="Card image cap"></mdb-card-img>
+                    <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+                <!--Card content-->
+                <mdb-card-body>
+    
+                    <!--Text-->
+                    <mdb-card-text>
+                        {{item.title}}
+                    </mdb-card-text>
+    
+                    <mdb-card-text class="font-weight-bold mt-1">
+                        {{item.precio}}
+                    </mdb-card-text>
+    
+    
+                </mdb-card-body>
+            </div>
+    
+        </div>
+    
+        
+    
+    </div>
+    
+    
+    <!-- /.TARJETAS -->
+    
+
+</div>
+
+
+<!-- /.Footer -->
+<app-footer> </app-footer>

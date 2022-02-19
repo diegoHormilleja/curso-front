@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrapImagenes</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"
+        integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV"
+        crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <div class="container">
+        <form class="form-horizontal" action="url_destino" method="GET">
+
+
+            <div class="form-group row">
+                <label class="col-lg-2" for="nombreControl"> Nombre: </label>
+                <input
+                type="text"
+                class="form-control col-lg-10"
+                id="nombreControl"
+                name="nombre"
+                size="50"
+                placeholder="Escribe tu nombre..." aria-describedby="nombreHelp" />
+                <div class="col-lg-2"></div>
+                <small id="nombreHelp" class="form-text text-muted">We'll never share your email with anyone
+                    else.</small>
+
+            </div>
+
+            <div class="form-group row">
+                <label class="col-lg-2"> Password: </label>
+                <input type="password" class="form-control-sm col-lg-10" name="pw" size="50" />
+            </div>
+
+            <input type="hidden" name="id" value="3" />
+
+            <div class="form-group row">
+                <label class="col-lg-2" for="exampleFormControlFile1">Example file input</label>
+                <input type="file" class="form-control-file col-lg-10" id="exampleFormControlFile1">
+            </div>
+
+            <div class="form-group form-check-inline row">
+                <label class="form-check-label col-lg-2" for="">Sexo: </label>
+                <input type="radio" name="sexo" value="h" checked="checked" /> <label for="">Hombre</label>
+                <input type="radio" name="sexo" value="m" /> <label for="">Mujer</label>
+            </div>
+
+
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1"
+                    checked>
+                <label class="form-check-label" for="exampleRadios1">
+                    Default radio
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                <label class="form-check-label" for="exampleRadios2">
+                    Second default radio
+                </label>
+            </div>
+            <div class="form-check disabled">
+                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios3" value="option3"
+                    disabled>
+                <label class="form-check-label" for="exampleRadios3">
+                    Disabled radio
+                </label>
+            </div>
+
+
+            <div class="custom-control custom-radio custom-control-inline">
+                <div>
+                    <label for=""> Sexo </label>
+                </div>
+                <input type="radio" id="customRadioInline1" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline1">Toggle this custom radio</label>
+              </div>
+              <div class="custom-control custom-radio custom-control-inline">
+                <input type="radio" id="customRadioInline2" name="customRadioInline1" class="custom-control-input">
+                <label class="custom-control-label" for="customRadioInline2">Or toggle this other custom radio</label>
+              </div>
+
+
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

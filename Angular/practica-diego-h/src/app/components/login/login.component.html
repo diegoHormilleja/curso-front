@@ -1,0 +1,74 @@
+<div class="center">
+  <!-- Default form login -->
+  <form class="text-center border border-light p-5">
+
+    <p class="h4 mb-4"> {{ logado ? 'Registro' :  'Iniciar sesión'  }} </p>
+
+    <div *ngIf="alert">
+        <i class="fas fa-exclamation-triangle"></i>
+        <p>
+          Parece que o bien tu dirección de email o la contraseña no es correcta. ¿Quieres volver a intentarlo?
+        </p>
+    </div>
+
+    <!-- Email -->
+    <input type="email" [(ngModel)]="email" name="email" id="defaultLoginFormEmail" class="form-control mb-4"
+      placeholder="E-mail">
+
+    <!-- Password -->
+    <input type="password" [(ngModel)]="password" name="pass" id="defaultLoginFormPassword" class="form-control mb-4"
+      placeholder="Password">
+
+    <input *ngIf="logado" type="password" [(ngModel)]="confirmPassword" name="confirmPass" id="defaultLoginFormPassword"
+      class="form-control mb-4" placeholder="Confirm Password">
+
+    <div *ngIf="!logado" class="d-flex justify-content-around">
+      <div>
+        <!-- Remember me -->
+        <mdb-checkbox [default]="true">Recuerdame</mdb-checkbox>
+      </div>
+      <div>
+        <!-- Forgot password -->
+        <a [ngStyle]="{'color': '#007bff'}">¿Olvidó su contraseña?</a>
+      </div>
+    </div>
+
+
+
+    <!-- Sign in button -->
+    <button mdbBtn color="teal" block="true" class="my-4" type="submit" (click)=' logado ? registrar() :  login() '>
+      {{ logado ? 'Registro' :  'Iniciar sesión' }} </button>
+
+    <!-- Register -->
+    <p *ngIf="!logado">¿No tiene una cuenta?
+      <a (click)='change()' [ngStyle]="{'color': '#007bff'}">Cree una</a>
+    </p>
+
+    <div *ngIf="logado">
+      <p>¿Tiene una cuenta?
+        <a (click)='change()' [ngStyle]="{'color': '#007bff'}">Inicie sesión</a>
+      </p>
+    </div>
+
+
+
+
+    <!-- Social login -->
+    <p>o inicia sesión con:</p>
+
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="facebook"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="twitter"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="linkedin"></mdb-icon>
+    </a>
+    <a type="button" class="light-blue-text mx-2">
+      <mdb-icon fab icon="github"></mdb-icon>
+    </a>
+
+  </form>
+  <!-- Default form login -->
+</div>

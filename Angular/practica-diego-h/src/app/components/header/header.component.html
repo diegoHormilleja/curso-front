@@ -1,0 +1,104 @@
+<!--Navbar LINKS-->
+    <mdb-navbar SideClass="navbar navbar-expand-lg navbar-light" >
+
+    <!-- Navbar brand -->
+    <mdb-navbar-brand class="mb-2"></mdb-navbar-brand>
+
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item">
+                <a class="nav-link">
+                    <mdb-icon fab icon="twitter" style="color: #ab2121;"></mdb-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link">
+                    <mdb-icon fab icon="playstation" style="color: #ab2121;"></mdb-icon>
+                </a>
+            </li>
+            <li class="nav-item">
+            <a class="nav-link" routerLink='/login'>
+                
+                    <mdb-icon fas icon="user" style="color:#007bff;" mdbDropdownToggle></mdb-icon>
+                    
+                </a>
+            </li>
+        </ul>
+    </links>
+    <!-- Collapsible content -->
+
+</mdb-navbar>
+<!--/.Navbar-->
+
+
+
+<!--Navbar  SEARCH-->
+<mdb-navbar SideClass="navbar navbar-expand-lg navbar-dark teal">
+
+    <mdb-navbar-brand>
+        <a class="navbar-brand" href="">
+            <img src="https://mdbootstrap.com/img/logo/mdb-transparent.png" height="30" class="d-inline-block align-top"
+                alt="">
+        </a>
+    </mdb-navbar-brand>
+
+    <mdb-icon fas icon="angle-left" size="lg" class="text-white mr-auto d-flex d-md-none align-self-center"></mdb-icon>
+
+    <!-- Collapsible content -->
+    <links>
+
+        <!-- Links -->
+        <ul class="navbar-nav mr-auto">
+            <!-- <li class="nav-item active">
+          <a class="nav-link waves-light" mdbWavesEffect>Home<span class="sr-only">(current)</span></a>
+        </li> -->
+
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
+                    mdbWavesEffect>
+                    Hombre<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a routerLink='/men' class="dropdown-item waves-light" mdbWavesEffect href="#">Chaquetas y
+                        abrigos</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Sudaderas</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Tops</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Accesorios</a>
+                </div>
+            </li>
+
+            <!-- Dropdown -->
+            <li class="nav-item dropdown" dropdown>
+                <a dropdownToggle mdbWavesEffect type="button" class="nav-link dropdown-toggle waves-light"
+                    mdbWavesEffect>
+                    Mujer<span class="caret"></span></a>
+                <div *dropdownMenu class="dropdown-menu dropdown dropdown-primary" role="menu">
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Chaquetas y abrigos</a>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Sudaderas</a>
+                    <a routerLink='/women' class="dropdown-item waves-light" mdbWavesEffect href="#">Tops</a>
+                    <div class="divider dropdown-divider"></div>
+                    <a class="dropdown-item waves-light" mdbWavesEffect href="#">Accesorios</a>
+                </div>
+            </li>
+
+        </ul>
+        <!-- Links -->
+
+        <!-- Search form -->
+        <form class="form-inline waves-light" mdbWavesEffect *ngIf='mostrar'>
+            <div class="md-form my-0">
+                <input class="form-control mr-sm-2" type="text" placeholder="Search">
+            </div>
+        </form>
+    </links>
+    <!-- Collapsible content -->
+
+
+</mdb-navbar>
+<!--/.Navbar-->
